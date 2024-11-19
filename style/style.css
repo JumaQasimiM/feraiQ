@@ -1,0 +1,70 @@
+/* import Persian B Yakan font */
+@import url(http://awebfont.ir/css?id=1116);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'B Yekan', tahoma,Arial;
+}
+.contianer{
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto; */
+    width: 1200px;
+    background-color: lightgray;
+}
+
+/* menu */
+.header_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.header_right{
+    /* background-color: gray; */
+    display: flex;
+}
+.menu_list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.menu_item{
+    padding: 10px 15px;
+    color: #999;
+    font-size: 18px;
+}
+.menu_item:hover{
+    cursor: pointer;
+}
+.header_left{
+    /* background-color: blueviolet; */
+    display: flex;
+
+}
+.header_left .btn{
+    padding: 5px 20px;
+    color: #288ed9;
+}
+.header_left .btn_login{
+    background-color: #288ed9;
+    color: #fff;
+    border-radius: 30px;
+    margin-left: 5px;
+
+}
+.header_left .btn:hover{
+    cursor: pointer;
+}
+/* test */
+/* .lang:hover .lang_item{
+   display:block;
+}
+.lang_item{
+    display: none;
+} */

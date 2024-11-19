@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url(http://awebfont.ir/css?id=1116);
+
+body{
+   font-family: 'B Yekan',tahoma; 
+}
+.contianer{
+    margin: 0 auto;
+    background-color: rgb(134, 146, 159);
+    width: 1200px;
+}
+
+.header_top{
+
+    background-color: lightgray;
+    display: flex;
+    height: 400ox;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+.header_right{
+    /* background-color: red; */
+    display: flex;
+}
+div .nav{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+div .nav_item{
+    font-size: 23px;
+    color: #999;
+    padding: 10px 14px;
+}
+div .nav:hover{
+    cursor: pointer;
+}
+.header_left{
+    /* background-color: black; */
+    display: flex;
+}   
+div .btn{
+    padding: 7px 20px;
+    color: #288ed9;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+div .header_left .btn_login{
+    background-color: #288ed9;
+    color: #fff;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+.header_left .btn:hover{
+    cursor: pointer;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.header_bottom{
+
+}
+
+@media screen and (max-width:430px){
+    /* mobil */
+    .contianer{
+        width: 100%;
+    }
+   
+    .header_right .nav{
+        display: none;
+    }
+    .header_left .menu_slider{
+        display: ''!important;
+    }
+   
+
+}
+@media screen and (max-width:768px){
+    /* ipad */
+    .header_right .nav{
+        display: none;
+    }
+}
+@media screen and (max-width:1024px){
+    .contianer{
+        width: 100%;
+    }
+    .header_top{
+        flex-direction: column;
+    }
+}
+
+
+/* login page */
+
+#login_btn{
+    background-color: #288ed9;
+    color: #fff;
+    border-radius: 30px;
+    margin-left: 5px;
+    
+}
+#reg_btn{
+
+}
+
+#login_form{
+    margin-top: 20px;
+}
+
+div #login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+label{
+    padding: 4px;
+}
+input{
+    padding: 4px;
+    border-radius: 5px;
+    border: inherit;
+    border: 1px solid #288ed9;
+}
+
+
+
+.content{
+    background-image: url('images/logo.png');
+}
