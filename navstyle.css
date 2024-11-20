@@ -14,8 +14,7 @@ body{
 }
 
 .header_top{
-
-    background-color: lightgray;
+    /* background-color: lightgray; */
     display: flex;
     height: 400ox;
     justify-content: space-between;
@@ -26,6 +25,7 @@ body{
 .header_right{
     /* background-color: red; */
     display: flex;
+    
 }
 div .nav{
     list-style-type: none;
