@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register login</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <div class="contianer">
+      <header>Registeation form</header>
+      <form action="index.html" method="post" class="form">
+        <div class="input-box">
+          <label>Name</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your name "
+          />
+        </div>
+        <div class="input-box">
+          <label>Last name</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Enter your Last name"
+          />
+        </div>
+
+        <div class="culumn">
+          <div class="input-box">
+            <label>E-Mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your E-Mail"
+            />
+          </div>
+          <div class="input-box">
+            <label>Brith Date</label>
+            <input type="date" name="birthdate" id="birthdate" />
+          </div>
+        </div>
+        <!-- gender -->
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" name="gender" id="check" checked />
+              <label for="check">Male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" name="gender" id="check-female" />
+              <label for="check-female">female</label>
+            </div>
+          </div>
+        </div>
+        <!-- addresss -->
+        <div class="input-box adderss">
+          <label>addresss</label>
+          <input
+            type="text"
+            name="adderssline1"
+            id="adderssline1"
+            placeholder="Enter your Address line 1"
+          />
+        </div>
+        <!-- select COUNTRY -->
+        <div class="culumn">
+          <div class="input-box">
+            <label for="">Street</label>
+            <input
+              type="text"
+              name="street"
+              id="street"
+              placeholder="Enter your street"
+            />
+          </div>
+          <div class="input-box">
+            <label for="">Post Code</label>
+            <input
+              type="text"
+              name="plz"
+              id="plz"
+              placeholder="Enter your post code"
+            />
+          </div>
+        </div>
+        <!-- country -->
+        <div class="select-box">
+          <select name="" id="">
+            <option hidden>Country</option>
+            <option value="afg">Afghanistan</option>
+            <option value="usa">U.S.A</option>
+            <option value="de">Germany</option>
+          </select>
+        </div>
+        <!-- phone nummber -->
+        <div class="input-box">
+          <input type="tel" name="tellphone" id="tellphone" />
+        </div>
+
+        <!-- submit botton -->
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
