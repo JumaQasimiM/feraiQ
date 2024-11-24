@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resposive navbar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+     "
+    />
+  </head>
+  <body>
+    <section class="contianer">
+      <nav>
+        <!-- sidbar -->
+        <ul class="sidebar">
+          <li onclick="HideSidebar()">
+            <a href="#"><i class="fa fa-close"></i></a>
+          </li>
+          <!-- <li><a href="#">logo</a></li> -->
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">countuct</a></li>
+          <li><a href="#">login</a></li>
+          <li>
+            <a href="#"><i class="fa fa-menu"></i></a>
+          </li>
+        </ul>
+        <!-- end sidbar -->
+        <ul class="">
+          <li class="">
+            <a href="#"><img src="../images/logo.png" width="70" alt="" /></a>
+          </li>
+          <li class="hideOnmobile"><a href="#">home</a></li>
+          <li class="hideOnmobile"><a href="#">about</a></li>
+          <li class="hideOnmobile"><a href="#">login</a></li>
+          <li class="hideOnmobile"><a href="#">countuct</a></li>
+          <li class="menu-botton" onclick="ShowSidebar()">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <script>
+      function ShowSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function HideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
