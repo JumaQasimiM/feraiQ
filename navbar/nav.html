@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="navstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+     "
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <!-- <h1>logo</h1> -->
+          <img src="../images/logo.png" alt="" />
+        </div>
+        <ul id="menu-list">
+          <li><a href="">home</a></li>
+          <li><a href="">about</a></li>
+          <li><a href="">login</a></li>
+          <li><a href="">register</a></li>
+        </ul>
+        <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="togglemenu()"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- test section -->
+     <section class="test">
+        <div class="row"> <h1>text</h1></div>
+        <div class="row"> <h1>text</h1></div>
+        <div class="row"> <h1>text</h1></div>
+        <div class="row"> <h1>text</h1></div>
+        <div class="row"> <h1>text</h1></div>
+        <div class="row"> <h1>text</h1></div>
+     </section>
+    <!-- cióntuct us -->
+    <section>
+      <div class="contuct">
+        <div class="contuct-left">
+          <div class="address details">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="topic">address</div>
+            <div class="text-one">Niedernhall,10</div>
+            <div class="text-two">Germany</div>
+          </div>
+          <div class="address details">
+            <i class="fa-solid fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">0049 1525 34657</div>
+            <div class="text-two">0093 2344787</div>
+          </div>
+          <div class="address details">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">text@gmail.com</div>
+            <div class="text-two">text@gmail.com<</div>
+          </div>
+        </div>
+        <!-- right side -->
+        <div class="contuct-right">
+          <div class="topic-text">Send us message</div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam odit
+            excepturi quod distinctio earum, aliquam ex nihil ea cumque non
+            consectetur facere maxime molestiae quaerat ad. Illum ipsum
+            inventore architecto.
+          </p>
+          <form action="">
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name" />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email" />
+            </div>
+            <div class="input-box message-box">
+              <textarea></textarea>
+            </div>
+            <div class="button">
+              <input type="button" value="Send Now" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const menulist = document.getElementById("menu-list");
+      menulist.style.maxHeight = "0px";
+      function togglemenu() {
+        if (menulist.style.maxHeight == "0px") {
+          menulist.style.maxHeight = "300px";
+        } else {
+          menulist.style.maxHeight = "0px";
+        }
+      }
+    //   hidden
+    // function hideText(selector,maxLenght){
+    //     const ele = document.querySelector(selector);
+    //     const text = ele.textContent;
+    //     if(text.lenght>maxLenght){
+    //         ele.textContent = text.substring(0,maxLenght) + '...';
+    //     }
+    // }
+    // hideText('.topic-text',10);
+
+    function hideText(selector,maxWords, maxwidth){
+        const ele = document.querySelector(selector);
+        const originalText = ele.textContent.trim();
+        const words = originalText.split(' ');
+        function applyTrunText(){
+            if(window.innerWidth<=maxwidth && words.lenght > maxWords){
+                ele.textContent = words.slice(0, maxWords).join(' ') +'...';
+                ele.classList.add('turncated');
+
+            }
+            else{
+                ele.textContent = originalText;
+                ele.classList.remove('turncated');
+
+
+            }
+        }
+        window.addEventListener('resize',applyTrunText);
+        hideText('.topic-text',10,30);
+    }
+    
+    </script>
+  </body>
+</html>
