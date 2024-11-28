@@ -213,6 +213,11 @@ nav .menu-icon {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    /* serach */
+    .search-box{
+      height: 30px;
+      width: 250px;
+    } 
 
 
 }
@@ -235,4 +240,39 @@ nav .menu-icon {
     flex-shrink: 0;
     aspect-ratio: (3/2);
     
+}
+
+/* search */
+.search-box{
+  background: #c0bebe;
+  height: 40px;
+  width: 300px;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  border-radius: 6px;
+
+  
+}
+.search-box input{
+  width: 85%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #c0bebe;
+  color: #333;
+  font-size: 23px;
+  flex: 1;
+}
+.search-box i{
+  /* flex-grow: 1; */
+  width: 15%;
+  /* border: none;
+  outline: none; */
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
