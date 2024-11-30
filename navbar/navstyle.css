@@ -49,6 +49,12 @@ nav .menu-icon {
   color: var(--text-color);
   font-size: 23px;
 }
+nav li:has(> ul)::after{
+  content: '⮟';
+  position: absolute;
+  right: 110px;
+  top: 0;
+}
 @media (max-width: 600px) {
   nav ul {
     position: absolute;
@@ -73,15 +79,22 @@ nav .menu-icon {
 }
 
 /* countct us */
+.conttuct-contianer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
 .contuct {
-  width: 80%;
+  width: 100%;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
+
 }
 .contuct .contuct-left {
   width: 30%;
@@ -115,6 +128,7 @@ nav .menu-icon {
 .contuct-left .details .topic {
   font-size: 18px;
   font-weight: 500;
+  
 }
 .contuct-left .details .text-one,
 .contuct-left .details .text-two {
@@ -131,14 +145,19 @@ nav .menu-icon {
   color: #3e2093;
   font-weight: 600;
 }
+.contuct-right:has(p){
+  font-size: 18px;
+  line-height: 25px;
+
+}
 .contuct-right .input-box {
   width: 100%;
   height: 50px;
   margin: 10px 0;
 }
 
-.contuct-right .input-box input,
-.contuct-right .input-box textarea {
+.contuct-right .input-box :where(input,textarea)
+{
   width: 100%;
   height: 100%;
   border: none;
@@ -149,6 +168,14 @@ nav .menu-icon {
   padding: 0px 10px;
   resize: none;
 }
+.contuct-right .input-box :is(input,textarea):where(:hover,:focus)
+{
+  border: none;
+  outline: none;
+  border: 1px solid lightblue;
+  border-radius: 0px;
+}
+
 .contuct-right .message-box{
     min-height: 110px;
     margin-top: 16px;
@@ -217,6 +244,7 @@ nav .menu-icon {
     .search-box{
       height: 30px;
       width: 250px;
+      margin-right: 5px;
     } 
 
 
@@ -228,12 +256,14 @@ nav .menu-icon {
     overflow: scroll;
     scroll-snap-type: x mandatory;
     scrollbar-width: 5px;
+    background: rebeccapurple;
+    /* height: 300px; */
 
 }
 .test .row{
-    display: none;
+    display: ;
     scroll-snap-align: start;
-    width: 100px;
+    width: 300px;
     height: 100px;
     background-color: lightcoral;
     border: 2px solid #fff;
@@ -246,8 +276,8 @@ nav .menu-icon {
 .search-box{
   background: #c0bebe;
   height: 40px;
-  width: 300px;
-  /* position: relative; */
+  width: 350px;
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0px 10px;
@@ -255,7 +285,7 @@ nav .menu-icon {
 
   
 }
-.search-box input{
+.search-box  input{
   width: 85%;
   height: 100%;
   border: none;
@@ -263,16 +293,17 @@ nav .menu-icon {
   background: #c0bebe;
   color: #333;
   font-size: 23px;
-  flex: 1;
+  /* flex: 1; */
 }
 .search-box i{
   /* flex-grow: 1; */
   width: 15%;
-  /* border: none;
-  outline: none; */
   font-size: 23px;
   display: flex;
   align-items: center;
   justify-content: center;
   
+}
+.search-box input::placeholder{
+  color: #fff;
 }

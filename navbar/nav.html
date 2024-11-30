@@ -19,8 +19,10 @@
           <img src="../images/logo.png" alt="" />
         </div>
         <div class="search-box">
-          <input type="search">
-          <i class="fa fa-search" type="button"></i>
+          <!-- <form action="#"> -->
+            <input type="search" placeholder="Search..." />
+            <i class="fa fa-search" type="button"></i>
+          <!-- </form> -->
         </div>
         <ul id="menu-list">
           <li><a href="">home</a></li>
@@ -35,16 +37,20 @@
       </nav>
     </header>
     <!-- test section -->
-     <section class="test">
-        <div class="row"> <h1>text</h1></div>
-        <div class="row"> <h1>text</h1></div>
-        <div class="row"> <h1>text</h1></div>
-        <div class="row"> <h1>text</h1></div>
-        <div class="row"> <h1>text</h1></div>
-        <div class="row"> <h1>text</h1></div>
-     </section>
+    <section class="test">
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+      <div class="row"><h1>text</h1></div>
+    </section>
     <!-- cióntuct us -->
-    <section>
+    <section class="conttuct-contianer">
       <div class="contuct">
         <div class="contuct-left">
           <div class="address details">
@@ -103,37 +109,32 @@
           menulist.style.maxHeight = "0px";
         }
       }
-    //   hidden
-    // function hideText(selector,maxLenght){
-    //     const ele = document.querySelector(selector);
-    //     const text = ele.textContent;
-    //     if(text.lenght>maxLenght){
-    //         ele.textContent = text.substring(0,maxLenght) + '...';
-    //     }
-    // }
-    // hideText('.topic-text',10);
+      //   hidden
+      // function hideText(selector,maxLenght){
+      //     const ele = document.querySelector(selector);
+      //     const text = ele.textContent;
+      //     if(text.lenght>maxLenght){
+      //         ele.textContent = text.substring(0,maxLenght) + '...';
+      //     }
+      // }
+      // hideText('.topic-text',10);
 
-    function hideText(selector,maxWords, maxwidth){
+      function hideText(selector, maxWords, maxwidth) {
         const ele = document.querySelector(selector);
         const originalText = ele.textContent.trim();
-        const words = originalText.split(' ');
-        function applyTrunText(){
-            if(window.innerWidth<=maxwidth && words.lenght > maxWords){
-                ele.textContent = words.slice(0, maxWords).join(' ') +'...';
-                ele.classList.add('turncated');
-
-            }
-            else{
-                ele.textContent = originalText;
-                ele.classList.remove('turncated');
-
-
-            }
+        const words = originalText.split(" ");
+        function applyTrunText() {
+          if (window.innerWidth <= maxwidth && words.lenght > maxWords) {
+            ele.textContent = words.slice(0, maxWords).join(" ") + "...";
+            ele.classList.add("turncated");
+          } else {
+            ele.textContent = originalText;
+            ele.classList.remove("turncated");
+          }
         }
-        window.addEventListener('resize',applyTrunText);
-        hideText('.topic-text',10,30);
-    }
-    
+        window.addEventListener("resize", applyTrunText);
+        hideText(".topic-text", 10, 30);
+      }
     </script>
   </body>
 </html>
