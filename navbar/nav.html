@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="navstyle.css" />
     <link
       rel="stylesheet"
@@ -25,10 +30,11 @@
           <!-- </form> -->
         </div>
         <ul id="menu-list">
-          <li><a href="">home</a></li>
-          <li><a href="">about</a></li>
-          <li><a href="">login</a></li>
-          <li><a href="">register</a></li>
+          <li><a href="">Login</a></li>
+          <li><a href="">Register</a></li>
+          <li><a href="">Contuct us</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Home</a></li>
         </ul>
 
         <div class="menu-icon">
@@ -36,6 +42,57 @@
         </div>
       </nav>
     </header>
+    <!-- CONTENT -->
+    <section>
+      <div class="contianer-content">
+        <img src="../images/back.jpg" width="120" />
+      </div>
+    </section>
+
+    <!-- about section -->
+
+    <section class="show-members-slider">
+      <h1>Team Member</h1>
+      <div class="about-member-contianer swiper">
+        <div class="slider">
+          <!-- card list  -->
+          <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+              <img src="../images/3.jpg" alt="" width="70" />
+              <h3 class="member-name">M Juma</h3>
+              <p class="member-position">Software Developer</p>
+              <button class="message-send">Message</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="../images/4.jpg" alt="" width="70" />
+              <h3 class="member-name">M Juma Qasimi</h3>
+              <p class="member-position">Software Developer</p>
+              <button class="message-send">Message</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="../images/2.jpg" alt="" width="70" />
+              <h3 class="member-name">Herr Qasimi</h3>
+              <p class="member-position">Software Developer</p>
+              <button class="message-send">Message</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="../images/4.jpg" alt="" width="70" />
+              <h3 class="member-name">M Juma</h3>
+              <p class="member-position">Software Developer</p>
+              <button class="message-send">Message</button>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-btn swiper-button-prev"></div>
+          <div class="swiper-btn swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End card list -->
     <!-- test section -->
     <section class="test">
       <div class="row"><h1>text</h1></div>
@@ -136,5 +193,9 @@
         hideText(".topic-text", 10, 30);
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- swiper -->
   </body>
 </html>

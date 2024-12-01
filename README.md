@@ -8,3 +8,4 @@
 
     baner backgroud color: #004274;
     body bg color :  #3498db;
+    background: linear-gradient(45deg, red, blue);
