@@ -43,7 +43,6 @@ body{
 
 h1{
     font-size: 23px;
-    padding: 20px;
 }
 
 .input-box{
@@ -97,3 +96,5 @@ a{
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
