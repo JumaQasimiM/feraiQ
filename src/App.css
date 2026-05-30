@@ -6,5 +6,6 @@
   /* fonts */
   --font-quicksand: "Quicksand", serif;
   --bg-brand-color: "";
-  --text-brand-color: "";
+  --text-color: #374151;
+  --text-brand-color: #4407a8;
 }
