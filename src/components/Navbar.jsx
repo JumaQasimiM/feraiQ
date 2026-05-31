@@ -20,7 +20,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="w-full sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <section className="w-full sticky top-0 z-50  backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-6">
         {/* Logo */}
         <img src={logo} alt="Logo" className="w-36 md:w-40 object-contain" />
