@@ -3,7 +3,7 @@ import logo from "../assets/logo-trans.png";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen md:h-[90vh] overflow-hidden bg-gradient-to-br from-[#1E2F97] via-[#2d46c5] to-[#3c63ff]">
+    <section className="relative h-[95vh] md:h-[90vh] overflow-hidden bg-gradient-to-br from-[#1E2F97] via-[#2d46c5] to-[#3c63ff]">
       {/* Particles */}
       <ParticlesComponent id="hero-particles" />
 
@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative z-20 h-full flex items-center justify-center lg:justify-end px-4 md:px-10">
         <div
           className="
-            max-w-2xl
+            max-w-4xl
             bg-white/10
             backdrop-blur-xl
             border border-white/20
