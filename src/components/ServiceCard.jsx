@@ -5,7 +5,7 @@ const ServiceCard = ({ title, link }) => {
   return (
     <div className="text-center group flex flex-col justify-between rounded bg-white p-8 shadow-sm border border-slate-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
       <div>
-        <h3 className="text-xl font-semibold text-slate-900 leading-snug selection:bg-[#1E2F97] selection:text-white">
+        <h3 className="text-xl font-semibold text-slate-900 leading-snug ">
           {title}
         </h3>
       </div>

@@ -22,19 +22,19 @@ const ITServiceOptions = () => {
     <section className="mx-auto max-w-7xl px-5 py-24">
       {/* Header */}
       <div className="mx-auto max-w-4xl text-center">
-        <span className="text-sm font-semibold uppercase tracking-widest text-[#1E2F97] selection:bg-[#1E2F97] selection:text-white">
+        <span className="text-sm font-semibold uppercase tracking-widest text-brand-color ">
           Ihr zuverlässiger IT-Partner vor Ort
         </span>
 
-        <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 md:text-5xl selection:bg-[#1E2F97] selection:text-white">
+        <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 md:text-5xl ">
           Kontinuierliche IT-Betreuung und Support
         </h2>
 
-        <p className="mt-4 text-lg text-slate-700 md:text-xl selection:bg-[#1E2F97] selection:text-white">
+        <p className="mt-4 text-lg text-slate-700 md:text-xl ">
           Individuell auf die Bedürfnisse Ihres Unternehmens zugeschnitten.
         </p>
 
-        <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg selection:bg-[#1E2F97] selection:text-white">
+        <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg ">
           Suchen Sie einen zuverlässigen Partner für die kontinuierliche
           Betreuung Ihrer IT-Infrastruktur? Mit flexiblen Vertragsmodellen und
           individuellen Servicekonzepten bieten wir passgenaue IT-Lösungen für
