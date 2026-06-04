@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaUser } from "react-icons/fa";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
@@ -9,34 +9,39 @@ import logo from "../assets/logo-1.png";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItem = [
-    { name: "HOME", path: "/" },
-    { name: "SERVICES", path: "/services" },
-    { name: "PROJECTS", path: "/projects" },
-    { name: "ABOUT US", path: "/about" },
-    { name: "CONTACT", path: "/contact" },
-    { name: "EN", path: "/en" },
-    { name: "DE", path: "/de" },
+  const navItems = [
+    { name: "Startseite", path: "/" },
+    { name: "Leistungen", path: "/services" },
+    { name: "Projekte", path: "/projects" },
+    { name: "Über uns", path: "/about" },
+    { name: "Kontakt", path: "/contact" },
   ];
 
   return (
-    <section className="w-full sticky top-0 z-50  backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-6">
-        {/* Logo */}
-        <img src={logo} alt="Logo" className="w-36 md:w-40 object-contain" />
-
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
+      {" "}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+        {/* Logo */}{" "}
+        <Link to="/">
+          {" "}
+          <img
+            src={logo}
+            alt="FeraiQ Logo"
+            className="w-32 object-contain md:w-36"
+          />{" "}
+        </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
-          <ul className="flex items-center gap-7 font-quicksand font-semibold">
-            {navItem.map((item, index) => (
-              <li key={index}>
+          <ul className="flex items-center gap-8 text-sm font-medium">
+            {navItems.map((item) => (
+              <li key={item.path}>
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `relative group text-sm tracking-wide transition-all duration-300 ${
+                    `group relative transition-colors duration-300 ${
                       isActive
-                        ? "text-sky-500"
-                        : "text-[#374151] hover:text-sky-500"
+                        ? "text-sky-600"
+                        : "text-gray-700 hover:text-sky-600"
                     }`
                   }
                 >
@@ -45,12 +50,9 @@ const Navbar = () => {
                       {item.name}
 
                       <span
-                        className={`
-                          absolute left-1/2 -translate-x-1/2 -bottom-1
-                          h-[2px] bg-sky-500 rounded-full
-                          transition-all duration-300
-                          ${isActive ? "w-full" : "w-0 group-hover:w-full"}
-                        `}
+                        className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-sky-600 transition-all duration-300 ${
+                          isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
                       />
                     </>
                   )}
@@ -58,61 +60,63 @@ const Navbar = () => {
               </li>
             ))}
 
-            <button
+            <Link
+              to="/contact"
               className="
-                bg-gradient-to-r
-                from-sky-500
-                to-blue-700
-                text-white
-                py-1 px-6
-                rounded-2xl
-                font-medium
-                shadow-lg shadow-blue-500/20
-                transition-all duration-300
-                hover:scale-105
-                hover:shadow-blue-500/40
-                active:scale-95
-              "
+            rounded
+            bg-gradient-to-r
+            from-sky-500
+            to-blue-700
+            px-6
+            py-2.5
+            font-medium
+            text-white
+            shadow-lg
+            transition-all
+            duration-300
+            hover:scale-105
+            hover:shadow-xl
+          "
             >
-              Sign In
-            </button>
+              Kostenlose Beratung
+            </Link>
           </ul>
         </nav>
-
         {/* Mobile Navigation */}
-        <div className="lg:hidden flex items-center gap-4">
-          <button
+        <div className="flex items-center gap-3 lg:hidden">
+          <Link
+            to="/contact"
             className="
-              bg-gradient-to-r
-              from-sky-500
-              to-blue-600
-              text-white
-              py-1 px-5
-              rounded-xl
-              text-sm
-              font-medium
-              shadow-lg
-            "
+          rounded
+          bg-gradient-to-r
+          from-sky-500
+          to-blue-700
+          px-4
+          py-2
+          text-sm
+          font-medium
+          text-white
+        "
           >
-            Sign In
-          </button>
+            Beratung
+          </Link>
 
           <button
             onClick={() => setIsMobileMenuOpen(true)}
             className="text-gray-700"
+            aria-label="Open Menu"
           >
-            <FaBarsStaggered size={24} />
+            <FaBarsStaggered size={22} />
           </button>
         </div>
       </div>
-
-      {/* Mobile Sidebar */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 bg-black/40 z-40"
+              className="fixed inset-0 z-40 bg-black/50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -121,61 +125,70 @@ const Navbar = () => {
 
             {/* Sidebar */}
             <motion.div
-              initial={{ y: "-100%" }}
-              animate={{ y: -0 }}
-              exit={{ y: "100%" }}
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
               transition={{
-                duration: 0.55,
+                duration: 0.35,
                 ease: "easeInOut",
               }}
               className="
-                fixed top-0 right-0
-                w-full max-w-sm
-                min-h-screen
-                bg-white/95
-                backdrop-blur-xl
-                shadow-2xl
-                z-50
-              "
+            fixed
+            top-0
+            right-0
+            z-50
+            h-screen
+            w-full
+            max-w-sm
+            bg-white
+            shadow-2xl
+          "
             >
               {/* Header */}
-              <div className="flex items-center justify-between px-6 py-5 border-b">
-                <img src={logo} alt="logo" className="w-28" />
+              <div className="flex items-center justify-between border-b px-6 py-5">
+                <img
+                  src={logo}
+                  alt="FeraiQ Logo"
+                  className="w-28 object-contain"
+                />
 
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl text-gray-500 hover:text-red-500 transition"
+                  className="text-2xl text-gray-500 transition hover:text-red-500"
                 >
                   <FaXmark />
                 </button>
               </div>
 
               {/* User Card */}
-              <div className="mx-4 mt-6 p-4 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                    <FaUser size={18} />
+              <div className="mx-4 mt-6 rounded bg-gradient-to-r from-sky-500 to-blue-700 p-5 text-white">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+                    <FaUser />
                   </div>
 
                   <div>
-                    <h3 className="font-semibold">Welcome</h3>
-                    <p className="text-sm text-white/80">Sign in to continue</p>
+                    <h3 className="font-semibold">FeraiQ IT Solutions</h3>
+
+                    <p className="text-sm text-white/80">
+                      Software • Webentwicklung • KI
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Nav Links */}
+              {/* Navigation Links */}
               <ul className="mt-8 px-6">
-                {navItem.map((item, index) => (
-                  <li key={index}>
+                {navItems.map((item) => (
+                  <li key={item.path}>
                     <NavLink
                       to={item.path}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `flex items-center py-4 border-b border-gray-100 transition-all duration-300 ${
+                        `block border-b border-gray-100 py-4 transition-all duration-300 ${
                           isActive
-                            ? "text-sky-500 font-semibold"
-                            : "text-gray-700 hover:text-sky-500"
+                            ? "font-semibold text-sky-600"
+                            : "text-gray-700 hover:text-sky-600"
                         }`
                       }
                     >
@@ -184,11 +197,35 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* CTA */}
+              <div className="px-6 pt-8">
+                <Link
+                  to="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="
+                block
+                rounded
+                bg-gradient-to-r
+                from-sky-500
+                to-blue-700
+                py-3
+                text-center
+                font-medium
+                text-white
+                shadow-lg
+                transition
+                hover:scale-[1.02]
+              "
+                >
+                  Unverbindlich beraten lassen
+                </Link>
+              </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
-    </section>
+    </header>
   );
 };
 
