@@ -21,12 +21,12 @@ const ITServiceOptions = () => {
   return (
     <section className="mx-auto max-w-7xl px-5 py-24">
       {/* Header */}
-      <div className="mx-auto max-w-4xl text-center">
-        <span className="text-sm font-semibold uppercase tracking-widest text-brand-color ">
+      <div className="mx-auto max-w-4xl text-center  font-quicksand font-extrabold">
+        <span className="text-sm uppercase tracking-widest text-brand-color">
           Ihr zuverlässiger IT-Partner vor Ort
         </span>
 
-        <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 md:text-5xl ">
+        <h2 className="mt-4 text-3xl leading-tight text-slate-900 md:text-5xl ">
           Kontinuierliche IT-Betreuung und Support
         </h2>
 
