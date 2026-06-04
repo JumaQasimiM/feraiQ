@@ -1,20 +1,20 @@
 import ParticlesComponent from "./ParticlesComponent";
-import logo from "../assets/logo-trans.png";
+import programing from "../assets/programing.png";
 
 const Hero = () => {
   return (
-    <section className="relative h-[95vh] md:h-[90vh] overflow-hidden bg-gradient-to-br from-[#1E2F97] via-[#2d46c5] to-[#3c63ff]">
+    <section className="relative h-[95vh]  md:h-[90vh] overflow-hidden bg-gradient-to-br from-[#1E2F97] via-[#2d46c5] to-[#3c63ff]">
       {/* Particles */}
-      <ParticlesComponent id="hero-particles" />
+      {/* <ParticlesComponent id="hero-particles" /> */}
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/20 z-[1]" />
 
       {/* Background Logo */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-contain bg-center opacity-10 z-[2]"
+        className="absolute inset-0 bg-no-repeat  bg-cover opacity-90 z-[2]"
         style={{
-          backgroundImage: `url(${logo})`,
+          backgroundImage: `url(${programing})`,
         }}
       />
 
@@ -22,13 +22,14 @@ const Hero = () => {
       <div className="relative z-20 h-full flex items-center justify-center lg:justify-end px-4 md:px-10">
         <div
           className="
-            max-w-4xl
-            bg-white/10
+            max-w-3xl
+            bg-sky-700
             backdrop-blur-xl
             border border-white/20
-            rounded-xl
-            p-8 md:p-12
+            rounded
+            p-8 md:p-10
             shadow-2xl
+
           "
         >
           {/* Badge */}
@@ -95,7 +96,7 @@ const Hero = () => {
             <button
               className="
                 px-8 py-4
-                rounded-xl
+                rounded
                 bg-white
                 text-[#1E2F97]
                 font-semibold
