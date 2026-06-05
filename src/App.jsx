@@ -1,28 +1,26 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar";
-import Hero from "./components/Hero";
-import ITServiceOptions from "./components/ITServiceOptions";
-import AboutSection from "./components/AboutSection";
-import WhyChooseUs from "./components/WhyChooseUs";
-import PartnersAndTechnologies from "./components/PartnersAndTechnologies ";
-import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
-// import { Home } from "./components/home";
+
+import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
+import Careers from "./pages/Careers";
+
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <Hero />
-        <ITServiceOptions />
-        <AboutSection />
-        <WhyChooseUs />
-        <PartnersAndTechnologies />
-      </BrowserRouter>
-      <Testimonials />
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/careers" element={<Careers />} />
+      </Routes>
+
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
