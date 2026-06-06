@@ -12,7 +12,7 @@ import ansprochpartner from "../assets/ansprochpartner.jpg";
 const jobs = [
   {
     title: "Frontend Developer (React)",
-    slug: "frontend_developer_react",
+    slug: "frontend-developer-react",
     location: "Berlin / Remote",
     type: "Full-time",
     description:
@@ -20,7 +20,7 @@ const jobs = [
   },
   {
     title: "IT Support Specialist",
-    slug: "it_support_specialist",
+    slug: "it-support-specialist",
     location: "Berlin",
     type: "Full-time",
     description:
@@ -28,7 +28,7 @@ const jobs = [
   },
   {
     title: "Backend Developer (Node.js)",
-    slug: "backend_developer_nodejs",
+    slug: "backend-developer-nodejs",
     location: "Remote",
     type: "part-time",
     description:
