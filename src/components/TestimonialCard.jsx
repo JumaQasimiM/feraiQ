@@ -1,5 +1,6 @@
 import React from "react";
-
+// icon
+import { FaQuoteLeft } from "react-icons/fa6";
 const TestimonialCard = ({ customerName, subject, content }) => {
   return (
     <div className="bg-white p-7 rounded">
