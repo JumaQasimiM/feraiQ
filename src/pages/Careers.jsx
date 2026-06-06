@@ -1,6 +1,15 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+// icons
+import {
+  FaLaptopCode,
+  FaHome,
+  FaUsers,
+  FaGraduationCap,
+  FaHeartbeat,
+  FaRocket,
+} from "react-icons/fa";
 
 import programming from "../assets/programing.png";
 import programming1 from "../assets/programing1.jpg";
@@ -35,7 +44,38 @@ const jobs = [
       "Entwicklung skalierbarer APIs und Backend-Systeme für moderne Anwendungen.",
   },
 ];
-
+const benefits = [
+  {
+    icon: <FaLaptopCode />,
+    title: "Modern Technologies",
+    text: "Arbeiten mit modernen Technologien wie React, Cloud-Lösungen und aktuellen IT-Standards.",
+  },
+  {
+    icon: <FaHome />,
+    title: "Flexible Arbeitsmodelle",
+    text: "Remote, Hybrid oder im Büro – wir bieten flexible Arbeitsmöglichkeiten.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Starkes Team",
+    text: "Offene Kommunikation, gegenseitige Unterstützung und ein wertschätzendes Miteinander.",
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Weiterbildung",
+    text: "Regelmäßige Schulungen, Zertifizierungen und persönliche Entwicklungsmöglichkeiten.",
+  },
+  {
+    icon: <FaHeartbeat />,
+    title: "Work-Life-Balance",
+    text: "Flexible Arbeitszeiten und eine Unternehmenskultur, die auf Vertrauen basiert.",
+  },
+  {
+    icon: <FaRocket />,
+    title: "Karrierechancen",
+    text: "Spannende Projekte, Eigenverantwortung und langfristige Entwicklungsperspektiven.",
+  },
+];
 const Careers = () => {
   return (
     <>
@@ -129,7 +169,7 @@ const Careers = () => {
               <img
                 src={ansprochpartner}
                 alt=""
-                className="h-[300px] w-full mt-4 mb-4"
+                className="h-[300px] mx-w-lg mt-4 mb-4"
               />
 
               <p className="text-sm text-slate-600 leading-relaxed">
@@ -145,44 +185,24 @@ const Careers = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-24">
-            {[
-              {
-                icon: "⚙️",
-                title: "Modern Technology",
-                text: "React, Node.js, Cloud & modern IT stacks.",
-              },
-              {
-                icon: "🏠",
-                title: "Flexible Work",
-                text: "Remote, hybrid or office – you decide.",
-              },
-              {
-                icon: "🤝",
-                title: "Strong Team",
-                text: "Open communication and real collaboration.",
-              },
-              {
-                icon: "🤝",
-                title: "Strong Team",
-                text: "Open communication and real collaboration.",
-              },
-              {
-                icon: "🤝",
-                title: "Strong Team",
-                text: "Open communication and real collaboration.",
-              },
-              {
-                icon: "🤝",
-                title: "Strong Team",
-                text: "Open communication and real collaboration.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="p-8 border border-gray-200 rounded">
-                <div className="text-3xl">{item.icon}</div>
-                <h3 className="mt-4 font-semibold text-slate-900">
+            {benefits.map((item, i) => (
+              <div
+                key={i}
+                className="p-8 border border-gray-200 rounded-lg bg-white hover:shadow-md transition"
+              >
+                <div className="flex justify-center">
+                  <h1 className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 text-2xl">
+                    {item.icon}
+                  </h1>
+                </div>
+
+                <h3 className="mt-5 text-lg font-semibold text-slate-900">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-slate-600">{item.text}</p>
+
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -191,10 +211,6 @@ const Careers = () => {
         {/* GALLERY */}
         <div className="mt-24 bg-slate-100 py-16">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl font-bold text-center mb-10 text-slate-900">
-              Our Workspace
-            </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 programming,

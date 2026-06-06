@@ -92,6 +92,9 @@ const Career_detail = () => {
               <TfiEmail size={18} />
             </a>
           </div>
+          <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+            Jetzt bewerben
+          </button>
         </div>
 
         {/* Sidebar */}
@@ -137,9 +140,11 @@ const Career_detail = () => {
             <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
               Jetzt bewerben
             </button>
-            <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
-              <Link to={"/careers"}>← Zruck</Link>
-            </button>
+            <Link to={"/careers"}>
+              <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+                ← Zruck
+              </button>
+            </Link>
           </div>
         </aside>
       </div>

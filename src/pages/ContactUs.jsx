@@ -30,7 +30,9 @@ const ContactUs = () => {
         {/* header */}
         <div className="text-center mb-12 space-y-5">
           <h1 className="text-lg font-semibold text-sky-800">KONTAKT</h1>
-          <h2 className="text-4xl mt-2 font-bold">Wir helfen Ihnen weiter</h2>
+          <h2 className="text-xl md:text-4xl mt-2 font-bold">
+            Wir helfen Ihnen weiter
+          </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             feraiQ ist ein IT-Systemhaus mit Sitz in Overath. Von hier aus
             betreut smartworx Kunden deutschlandweit. Sie haben eine Frage? Wir

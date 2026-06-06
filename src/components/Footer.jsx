@@ -10,10 +10,10 @@ import {
 import logo from "../assets/logo-1.png";
 const Footer = () => {
   const navigation = [
-    { name: "Startseite", link: "" },
-    { name: "Leistungen", link: "" },
-    { name: "Über uns", link: "" },
-    { name: " Kontakt", link: "" },
+    { name: "Startseite", link: "/" },
+    { name: "Leistungen", link: "/services" },
+    { name: "Karriere", link: "/careers" },
+    { name: " Kontakt", link: "/contact" },
   ];
   return (
     <footer className="bg-slate-950 text-white mt-10">

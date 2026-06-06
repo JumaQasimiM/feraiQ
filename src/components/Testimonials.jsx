@@ -10,7 +10,7 @@ const Testimonials = () => {
   const [index, setIndex] = useState(0);
   const testimonials = [
     {
-      customerName: "Martin",
+      customerName: "Juma Qasimi",
       subject: "Zuverlässiger IT-Partner",
       content:
         "Die Zusammenarbeit mit feraiQ verläuft seit Jahren äußerst professionell und zuverlässig. Anfragen werden schnell bearbeitet und Lösungen effizient umgesetzt. Besonders schätzen wir die kompetente Beratung und die hohe Servicequalität.",
@@ -34,16 +34,10 @@ const Testimonials = () => {
         "feraiQ begleitet unser Unternehmen seit mehreren Jahren als vertrauenswürdiger IT-Partner. Von der täglichen Betreuung bis hin zu komplexen Projekten erhalten wir stets professionelle Unterstützung und maßgeschneiderte Lösungen.",
     },
     {
-      customerName: "Sarah Klein",
+      customerName: "Mohammad Qasimi",
       subject: "Hervorragende Betreuung",
       content:
         "Die Zusammenarbeit mit feraiQ hat unsere internen Prozesse deutlich verbessert. Das Team arbeitet zuverlässig, transparent und mit einem hohen Qualitätsanspruch. Wir fühlen uns jederzeit bestens betreut.",
-    },
-    {
-      customerName: "Thomas Becker",
-      subject: "Kompetent und lösungsorientiert",
-      content:
-        "Ob Support-Anfragen, Systemwartung oder strategische IT-Beratung – feraiQ überzeugt durch Kompetenz und Engagement. Probleme werden schnell analysiert und nachhaltig gelöst. Eine Zusammenarbeit, die wir jederzeit weiterempfehlen würden.",
     },
   ];
   useEffect(() => {

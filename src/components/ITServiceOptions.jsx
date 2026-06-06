@@ -4,16 +4,20 @@ import ServiceCard from "./ServiceCard";
 const services = [
   {
     title: "Sie möchten Ihre interne IT durch einen IT-Dienstleister ersetzen?",
-    link: "/services/outsourcing",
+    link: "/services",
   },
   {
     title:
       "Sie sind unzufrieden mit Ihrem bisherigen IT-Dienstleister und wollen wechseln?",
-    link: "/services/provider-change",
+    link: "/services",
   },
   {
     title: "Sie suchen Unterstützung für Ihre interne IT in Spezialthemen?",
-    link: "/services/specialized-support",
+    link: "/services",
+  },
+  {
+    title: "Sie suchen Unterstützung für Ihre interne IT in Spezialthemen?",
+    link: "/services",
   },
 ];
 
