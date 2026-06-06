@@ -1,6 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { TfiEmail } from "react-icons/tfi";
+import { LuPhone } from "react-icons/lu";
+
 // image
 import programing from "../assets/programing.png";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -124,12 +126,19 @@ const Career_detail = () => {
             </div>
 
             <div className="mt-5 space-y-2 text-sm">
-              <p>📞 +49 1521 479 5072</p>
-              <p>✉️ bewerbung@feraiq.de</p>
+              <p className="flex justify-start items-center gap-2">
+                <LuPhone /> +49 1521 479 5072
+              </p>
+              <p className="flex justify-start items-center gap-2">
+                <TfiEmail /> bewerbung@feraiq.de
+              </p>
             </div>
 
             <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
               Jetzt bewerben
+            </button>
+            <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+              <Link to={"/careers"}>← Zruck</Link>
             </button>
           </div>
         </aside>
