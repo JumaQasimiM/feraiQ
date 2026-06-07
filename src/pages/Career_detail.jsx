@@ -1,67 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { TfiEmail } from "react-icons/tfi";
-import { LuPhone } from "react-icons/lu";
 
 // image
 import programing from "../assets/programing.png";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+
+// hooks
+import { useFetch } from "../hooks/useFetch";
+import { useFetchSingleData } from "../hooks/useFetchSingleData";
+
+// components
+import { Aboutus_careere_detail } from "../components/smallComponents/Aboutus_careere_detail";
 const Career_detail = () => {
   const { slug } = useParams();
-  const title = slug.split("-");
-  const job_title = title
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+
+  /** ========= fetch data from api========= */
+  const { data: job } = useFetchSingleData("jobs", slug);
+  /** ======================================== */
   return (
     <div className="max-w-7xl mx-auto px-6">
       {/* Hero Image */}
       <div className="overflow-hidden">
         <img
           src={programing}
-          alt={job_title}
+          alt={job?.title}
           className="w-full h-[350px] object-cover"
         />
       </div>
 
       {/* Job Header */}
       <h1 className="mt-4 text-4xl font-semibold font-quicksand text-slate-900 py-10">
-        {job_title} (m/w/d)
+        {job?.title} (m/w/d)
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Main Content */}
         <div className="lg:col-span-2 space-y-10">
-          {/* Aufgaben */}
-          <Section
-            title="Deine Aufgaben"
-            items={[
-              "Entwicklung moderner Webanwendungen",
-              "Zusammenarbeit mit Backend-Teams",
-              "Skalierbare Frontend-Architekturen aufbauen",
-              "Verantwortung für Code-Qualität",
-            ]}
-          />
-          {/* Anforderungen */}
-          <Section
-            title="Dein Profil"
-            items={[
-              "Abgeschlossenes Studium der Informatik, Wirtschaftsinformatik, Ingenieur- oder Naturwissenschaften",
-              "Sehr gute Programmierkenntnisse in JavaScript/TypeScript sowie Erfahrung mit modernen Frontend Frameworks (z. B. React, Vue oder Angular)",
-              "Teamfähigkeit und Eigeninitiative",
-              "Gute Deutsch und Englischkenntnisse",
-            ]}
-          />
-          {/* Benefits */}
-          <Section
-            title="Deine Aufgaben"
-            items={[
-              "Entwicklung moderner Webanwendungen",
-              "Zusammenarbeit mit Backend-Teams",
-              "Aufbau skalierbarer Frontend-Architekturen",
-              "Verantwortung für Code-Qualität",
-            ]}
-          />
+          {job && (
+            <>
+              {/* // Aufgaben */}
+              {job?.tasks && (
+                <Section title="Deine Aufgaben" items={job.tasks} />
+              )}
+              {/* // Anforderungen */}
+              {job?.profile && (
+                <Section title="Dein Profil" items={job.profile} />
+              )}
+              {/* // Benefits */}
+              {job?.benefits && (
+                <Section title="Benefits" items={job.benefits} />
+              )}
+            </>
+          )}
+
           {/* Social Media */}
           <div className="flex items-center gap-3 pt-6">
             <a
@@ -92,12 +83,14 @@ const Career_detail = () => {
               <TfiEmail size={18} />
             </a>
           </div>
-          <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
-            Jetzt bewerben
-          </button>
+          <a href="mailto:bewerbung@feraiq.de">
+            <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+              Jetzt bewerben
+            </button>
+          </a>
         </div>
-
-        {/* Sidebar */}
+        <Aboutus_careere_detail />
+        {/* Sidebar
         <aside className="border border-gray-300 rounded relative">
           <div className=" p-6 space-y-6 ">
             <div className="space-y-1">
@@ -137,16 +130,18 @@ const Career_detail = () => {
               </p>
             </div>
 
-            <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
-              Jetzt bewerben
-            </button>
+            <a href="mailto:bewerbung@feraiq.de">
+              <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+                Jetzt bewerben
+              </button>
+            </a>
             <Link to={"/careers"}>
               <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
                 ← Zruck
               </button>
             </Link>
           </div>
-        </aside>
+        </aside> */}
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 import { useFetch } from "./useFetch";
 
 /**
- *  fetch single:
- *      1.job
- *      2.blog
- *      3.service
+ * Fetch single data from API:
  *
+ * Supports different resource types like:
+ * 1. Job
+ * 2. Blog
+ * 3. Service
  */
 export const useFetchSingleData = (endpoint, slug) => {
   const result = useFetch(`http://localhost:5000/${endpoint}?slug=${slug}`);
