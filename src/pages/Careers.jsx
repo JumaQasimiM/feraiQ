@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 // icons
@@ -18,32 +18,8 @@ import programming3 from "../assets/programing4.jpg";
 import programming4 from "../assets/programing3.jpg";
 import programming5 from "../assets/programing5.jpg";
 import ansprochpartner from "../assets/ansprochpartner.jpg";
-const jobs = [
-  {
-    title: "Frontend Developer (React)",
-    slug: "frontend-developer-react",
-    location: "Berlin / Remote",
-    type: "Full-time",
-    description:
-      "Wir suchen einen React Developer mit Erfahrung in modernen Web-Apps und UI/UX Umsetzung.",
-  },
-  {
-    title: "IT Support Specialist",
-    slug: "it-support-specialist",
-    location: "Berlin",
-    type: "Full-time",
-    description:
-      "Unterstütze unsere Kunden bei technischen Problemen und IT-Infrastruktur Themen.",
-  },
-  {
-    title: "Backend Developer (Node.js)",
-    slug: "backend-developer-nodejs",
-    location: "Remote",
-    type: "part-time",
-    description:
-      "Entwicklung skalierbarer APIs und Backend-Systeme für moderne Anwendungen.",
-  },
-];
+import { useFetch } from "../hooks/useFetch";
+
 const benefits = [
   {
     icon: <FaLaptopCode />,
@@ -77,6 +53,10 @@ const benefits = [
   },
 ];
 const Careers = () => {
+  /** =============fetch data from api=============== */
+  const { data: jobs } = useFetch("http://localhost:5000/jobs");
+  /** ============================ */
+
   return (
     <>
       <div className="relative w-full h-[500px]">
