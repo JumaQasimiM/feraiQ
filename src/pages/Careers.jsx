@@ -18,7 +18,7 @@ import programming3 from "../assets/programing4.jpg";
 import programming4 from "../assets/programing3.jpg";
 import programming5 from "../assets/programing5.jpg";
 import ansprochpartner from "../assets/ansprochpartner.jpg";
-import { useFetch } from "../hooks/useFetch";
+import { useJobs } from "../hooks/useJobs";
 
 const benefits = [
   {
@@ -53,10 +53,11 @@ const benefits = [
   },
 ];
 const Careers = () => {
-  /** =============fetch data from api=============== */
-  const { data: jobs } = useFetch("http://localhost:5000/jobs");
-  /** ============================ */
+  /** =============fetch data[custom hook] from api=============== */
+  // const { data: jobs } = useFetch("http://localhost:5000/jobs");
 
+  /** ==============reqct query======== */
+  const { data: jobs = [] } = useJobs();
   return (
     <>
       <div className="relative w-full h-[500px]">
