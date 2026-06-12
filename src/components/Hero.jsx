@@ -81,7 +81,7 @@ const Hero = () => {
             backdrop-blur-2xl
             bg-white/5
             border border-white/20
-            rounded-xl
+            rounded
             p-8 md:p-10
             shadow-2xl
           "
@@ -112,7 +112,7 @@ const Hero = () => {
             <motion.h1
               variants={itemVariants}
               className="
-                text-2xl
+                text-lg
                 md:text-4xl
                 font-bold
                 text-white
@@ -145,7 +145,7 @@ const Hero = () => {
             <motion.p
               variants={itemVariants}
               className="
-                mt-6
+                mt-2
                 text-white/80
                 text-lg
                 leading-relaxed
@@ -182,7 +182,7 @@ const Hero = () => {
               variants={itemVariants}
               className="
                 mt-8
-                space-y-3
+                space-y-1
                 text-white/90
                 md:hidden
               "
@@ -214,9 +214,11 @@ const Hero = () => {
                     scale: 0.98,
                   }}
                   className="
-                    px-8
-                    py-4
-                    rounded-lg
+                    px-4
+                    md:px-8
+                    py-1
+                    md:py-4
+                    rounded
                     bg-white
                     text-[#1E2F97]
                     font-semibold

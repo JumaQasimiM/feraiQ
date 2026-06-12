@@ -143,7 +143,7 @@ const Career_detail = () => {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg"
+              className="w-full mt-6 bg-[#1E2F97] text-white py-3 rounded-lg"
             >
               Jetzt bewerben
             </motion.button>

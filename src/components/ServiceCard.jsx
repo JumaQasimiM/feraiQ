@@ -10,7 +10,7 @@ const containerVariants = {
     },
   },
 };
-const ServiceCard = ({ title, link }) => {
+const ServiceCard = ({ service }) => {
   return (
     <motion.div
       variants={containerVariants}
@@ -18,12 +18,13 @@ const ServiceCard = ({ title, link }) => {
     >
       <motion.div an>
         <h3 className="text-xl font-semibold text-slate-900 leading-snug ">
-          {title}
+          {service.title}
         </h3>
+        <h6>{service.desc}</h6>
       </motion.div>
 
       <motion.Link
-        to={link}
+        to={service.link}
         className="mt-8 inline-flex items-center justify-center rounded bg-[#1E2F97] px-6 py-3 font-medium text-white transition-colors duration-300 hover:bg-[#17257a]"
       >
         Mehr erfahren

@@ -53,6 +53,37 @@ const benefits = [
     text: "Spannende Projekte, Eigenverantwortung und langfristige Entwicklungsperspektiven.",
   },
 ];
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+const imageAnim = {
+  hidden: { scale: 1.05, opacity: 0.5 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 1.2, ease: "easeOut" },
+  },
+};
 const Careers = () => {
   /** =============fetch data[custom hook] from api=============== */
   // const { data: jobs } = useFetch("http://localhost:5000/jobs");
@@ -61,37 +92,62 @@ const Careers = () => {
   const { data: jobs = [] } = useJobs();
   return (
     <>
-      <div className="relative w-full h-[500px]">
-        <img
+      {/* herder */}
+      <motion.div
+        className="relative w-full h-[500px] overflow-hidden"
+        initial="hidden"
+        animate="show"
+        variants={container}
+      >
+        {/* Background Image */}
+        <motion.img
           src={programming2}
           alt="Karriere"
           className="w-full h-full object-cover"
+          variants={imageAnim}
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <motion.div className="absolute inset-0 bg-black/50" />
 
         {/* Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-          <span className="uppercase tracking-[4px] text-sm font-medium text-sky-300">
+        <motion.div
+          className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
+          variants={container}
+        >
+          <motion.span
+            variants={item}
+            className="uppercase tracking-[4px] text-sm font-medium text-gray-200"
+          >
             Karriere bei feraiQ
-          </span>
+          </motion.span>
 
-          <h1 className="mt-4 text-4xl md:text-6xl font-bold font-quicksand">
+          <motion.h1
+            variants={item}
+            className="mt-4 text-4xl md:text-6xl font-bold font-quicksand"
+          >
             Offene Stellen
-          </h1>
+          </motion.h1>
 
-          <p className="mt-6 max-w-2xl text-lg text-white/90 leading-relaxed">
+          <motion.p
+            variants={item}
+            className="mt-6 max-w-2xl text-lg text-white/90 leading-relaxed"
+          >
             Wir suchen talentierte Menschen, die mit uns die Zukunft der IT
             gestalten möchten. Entdecke unsere offenen Positionen und werde Teil
             unseres Teams.
-          </p>
+          </motion.p>
 
-          <button className="mt-8 px-8 py-3 bg-sky-600 hover:bg-sky-700 rounded font-medium transition">
+          <motion.button
+            variants={item}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="mt-8 px-8 py-3 bg-[#1E2F97] hover:bg-[#2339c3] rounded font-medium transition"
+          >
             Jetzt bewerben
-          </button>
-        </div>
-      </div>
+          </motion.button>
+        </motion.div>
+      </motion.div>
 
       {/* main content */}
       <section className="w-full py-16 md:py-24">
@@ -108,12 +164,12 @@ const Careers = () => {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={index}
-                  className="border border-slate-200 rounded bg-white p-6 hover:border-sky-300  "
+                  className="border border-slate-200 rounded bg-white p-6 hover:border-[#263dd2]  "
                 >
                   {/* HEADER */}
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <span className="inline-block text-xs font-medium text-sky-700 bg-sky-50 px-3 py-1 rounded-md">
+                      <span className="inline-block text-xs font-medium text-white bg-[#3b489a] px-3 py-1 rounded">
                         {job.type}
                       </span>
                     </div>
@@ -139,7 +195,7 @@ const Careers = () => {
                       Vollständige Stelle ansehen
                     </span>
 
-                    <button className="text-sm font-medium text-sky-600 hover:text-sky-700 transition">
+                    <button className="text-sm font-medium text-[#1E2F97] hover:text-[#2d41c4] transition">
                       <Link to={job.slug}>Bewerben →</Link>
                     </button>
                   </div>
@@ -187,7 +243,7 @@ const Careers = () => {
                 className="p-8 border border-gray-200 rounded-lg bg-white "
               >
                 <div className="flex justify-center">
-                  <h1 className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 text-2xl">
+                  <h1 className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-[#1E2F97] text-2xl">
                     {item.icon}
                   </h1>
                 </div>

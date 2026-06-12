@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Startseite", path: "/" },
     { name: "Leistungen", path: "/services" },
     { name: "Karriere", path: "/careers" },
+    { name: "News", path: "/news" },
     { name: "Kontakt", path: "/contact" },
   ];
 
@@ -39,8 +40,8 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     `group relative transition-colors duration-300 ${
                       isActive
-                        ? "text-sky-600"
-                        : "text-gray-700 hover:text-sky-600"
+                        ? "text-[#1E2F97]"
+                        : "text-gray-700 hover:[#1E2F97]"
                     }`
                   }
                 >
@@ -49,7 +50,7 @@ const Navbar = () => {
                       {item.name}
 
                       <span
-                        className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-sky-600 transition-all duration-300 ${
+                        className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#1E2F97] transition-all duration-300 ${
                           isActive ? "w-full" : "w-0 group-hover:w-full"
                         }`}
                       />
@@ -64,7 +65,7 @@ const Navbar = () => {
               className="
             rounded
             bg-gradient-to-r
-            from-sky-500
+            from-[#1E2F97]
             to-blue-700
             px-6
             py-2.5
@@ -88,7 +89,7 @@ const Navbar = () => {
             className="
           rounded
           bg-gradient-to-r
-          from-sky-500
+          from-[#1E2F97]
           to-blue-700
           px-4
           py-2

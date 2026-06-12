@@ -5,109 +5,155 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import ITServiceOptions from "../components/ITServiceOptions";
 import ContactUs from "./ContactUs";
 
+/* ---------------- ANIMATION ---------------- */
+
 const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
+    transition: { duration: 0.7, ease: "easeOut" },
   },
 };
+
+/* ---------------- SERVICES DATA ---------------- */
+
+const services = [
+  {
+    title: "IT-Support",
+    desc: "Schnelle Hilfe bei technischen Problemen – remote oder vor Ort.",
+  },
+  {
+    title: "Cloud-Lösungen",
+    desc: "Moderne Cloud-Infrastruktur für flexible und sichere IT-Systeme.",
+  },
+  {
+    title: "IT-Sicherheit",
+    desc: "Schutz Ihrer Daten durch Firewalls, Backup & Security-Lösungen.",
+  },
+  {
+    title: "IT-Beratung",
+    desc: "Strategische Planung Ihrer gesamten IT-Infrastruktur.",
+  },
+  {
+    title: "Netzwerk & Infrastruktur",
+    desc: "Aufbau und Wartung stabiler Unternehmensnetzwerke.",
+  },
+  {
+    title: "Managed Services",
+    desc: "Komplette Betreuung Ihrer IT – zuverlässig und proaktiv.",
+  },
+  {
+    title: "Web Development",
+    desc: "Moderne, schnelle und responsive Webseiten für Unternehmen.",
+  },
+];
+
+/* ---------------- COMPONENT ---------------- */
 
 const Services = () => {
   return (
     <section className="w-full">
-      {/* Services */}
+      {/* HERO SERVICES BLOCK */}
       <div className="max-w-7xl mx-auto -mt-15">
         <ITServiceOptions />
       </div>
 
-      {/* About Services */}
+      {/* SERVICES GRID */}
+      <section className="w-full bg-[#1E2F97] text-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-5xl font-bold font-quicksand">
+              Unsere IT-Services
+            </h2>
+            <p className="mt-4 text-white/80 max-w-2xl mx-auto">
+              Wir bieten ganzheitliche IT-Lösungen für Unternehmen jeder Größe –
+              von Support bis komplette Infrastruktur.
+            </p>
+          </motion.div>
+
+          {/* GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded"
+              >
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-white/80 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
-        viewport={{
-          once: true,
-          amount: 0.2,
-        }}
+        viewport={{ once: true }}
         className="bg-white"
       >
         <div className="max-w-5xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-quicksand md:text-4xl font-bold text-slate-900 mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold font-quicksand text-slate-900 mb-8">
             Warum feraiQ?
           </h2>
 
           <div className="space-y-6 text-slate-600 leading-8 text-lg">
             <p>
               Wir unterstützen Unternehmen mit professionellen IT-Services und
-              einem klaren Fokus auf nachhaltige Lösungen, persönliche Betreuung
-              und moderne Technologien.
+              modernen Technologien.
             </p>
 
             <p>
-              Ob IT-Infrastruktur, Cloud-Lösungen, Support oder strategische
-              Beratung – wir entwickeln Konzepte, die exakt auf die
-              Anforderungen Ihres Unternehmens zugeschnitten sind.
+              Unsere Lösungen sind individuell, skalierbar und auf langfristige
+              Zusammenarbeit ausgelegt.
             </p>
 
             <p>
-              Durch unsere Erfahrung aus unterschiedlichsten Projekten
-              profitieren unsere Kunden von bewährten Prozessen, effizienten
-              Abläufen und praxisnahen Lösungen.
+              Durch Erfahrung aus vielen Projekten liefern wir stabile und
+              effiziente IT-Strukturen.
             </p>
 
-            <p>
-              Unser Ziel ist es, IT einfach, sicher und effizient zu gestalten,
-              damit Sie sich vollständig auf Ihr Kerngeschäft konzentrieren
-              können.
-            </p>
+            <p>Ziel: IT einfach, sicher und leistungsfähig machen.</p>
           </div>
         </div>
       </motion.div>
 
       {/* CTA */}
       <motion.div
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.3,
-        }}
-        transition={{
-          duration: 0.8,
-        }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeUp}
         className="bg-[#1E2F97]"
       >
         <div className="max-w-7xl mx-auto px-6 py-20 text-center text-white">
-          <h2 className="text-3xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold font-quicksand">
             Benötigen Sie Unterstützung?
           </h2>
 
           <p className="mt-5 max-w-2xl mx-auto text-white/85 text-lg">
-            Unser Team berät Sie gerne zu Ihren IT-Anforderungen und entwickelt
-            gemeinsam mit Ihnen die passende Lösung.
+            Wir entwickeln die passende IT-Lösung für Ihr Unternehmen.
           </p>
 
           <motion.button
-            whileHover={{
-              scale: 1.05,
-            }}
-            whileTap={{
-              scale: 0.98,
-            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
             className="
               mt-10
               inline-flex
@@ -124,13 +170,8 @@ const Services = () => {
           >
             Jetzt Kontakt aufnehmen
             <motion.span
-              animate={{
-                y: [0, 4, 0],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 1.5,
-              }}
+              animate={{ y: [0, 4, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
             >
               <FaArrowDownLong />
             </motion.span>
@@ -138,8 +179,8 @@ const Services = () => {
         </div>
       </motion.div>
 
-      {/* Contact */}
-      <div className="max-w-7xl mx-auto px-6 md:py-20">
+      {/* CONTACT */}
+      <div className="max-w-7xl mx-auto md:px-6 md:py-20">
         <ContactUs />
       </div>
     </section>

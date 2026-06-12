@@ -45,12 +45,12 @@ export const Aboutus_careere_detail = () => {
         </div>
 
         <a href="mailto:bewerbung@feraiq.de">
-          <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+          <button className="w-full mt-6 bg-[#1E2F97] text-white py-3 rounded-lg hover:bg-[#2237c0] transition">
             Jetzt bewerben
           </button>
         </a>
         <Link to={"/careers"}>
-          <button className="w-full mt-6 bg-sky-600 text-white py-3 rounded-lg hover:bg-sky-700 transition">
+          <button className="w-full mt-6 bg-[#1E2F97] text-white py-3 rounded-lg hover:bg-[#2237c0] transition">
             ← Zruck
           </button>
         </Link>

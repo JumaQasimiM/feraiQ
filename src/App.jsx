@@ -9,6 +9,7 @@ import ContactUs from "./pages/ContactUs";
 import Careers from "./pages/Careers";
 import Career_detail from "./pages/Career_detail";
 import Services from "./pages/Services";
+import TechNewsPage from "./pages/TechNewsPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/careers/:slug" element={<Career_detail />} />
         <Route path="/services/" element={<Services />} />
+        <Route path="/news/" element={<TechNewsPage />} />
       </Routes>
 
       <Footer />
