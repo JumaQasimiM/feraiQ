@@ -16,7 +16,7 @@ export const Aboutus_careere_detail = () => {
         <h3 className="font-semibold mb-3">Über uns</h3>
 
         <p className="text-sm text-slate-600 leading-relaxed">
-          Seit 2025 unterstützen wir Unternehmen mit professionellen IT-Services
+          Seit 2024 unterstützen wir Unternehmen mit professionellen IT-Services
           und individuellen Lösungen für moderne Geschäftsprozesse.
         </p>
         <div>

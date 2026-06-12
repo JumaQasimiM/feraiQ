@@ -1,118 +1,162 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { useEffect } from "react";
 
 import bgTestmonial from "../assets/bg-testmonial.jpg";
 
+const testimonials = [
+  {
+    customerName: "Juma Qasimi",
+    subject: "Zuverlässiger IT-Partner",
+    content:
+      "Die Zusammenarbeit mit feraiQ verläuft äußerst professionell und zuverlässig. Anfragen werden schnell bearbeitet und Lösungen effizient umgesetzt.",
+  },
+  {
+    customerName: "Mohammad Juma",
+    subject: "Sehr kompetenter Service",
+    content:
+      "Dank feraiQ können wir uns auf unser Kerngeschäft konzentrieren. Das Team reagiert schnell und sorgt für einen stabilen IT-Betrieb.",
+  },
+  {
+    customerName: "Qasimi",
+    subject: "Top IT Support",
+    content:
+      "Besonders hervorzuheben sind die schnelle Unterstützung, die hohe Fachkompetenz und die persönliche Betreuung.",
+  },
+  {
+    customerName: "Mohammad",
+    subject: "Starke IT-Partnerschaft",
+    content:
+      "Von der täglichen Betreuung bis hin zu komplexen Projekten erhalten wir stets professionelle Unterstützung.",
+  },
+  {
+    customerName: "Mohammad Qasimi",
+    subject: "Hervorragende Betreuung",
+    content:
+      "Transparent, zuverlässig und lösungsorientiert – genau so wünschen wir uns einen IT-Dienstleister.",
+  },
+];
+
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
-  const testimonials = [
-    {
-      customerName: "Juma Qasimi",
-      subject: "Zuverlässiger IT-Partner",
-      content:
-        "Die Zusammenarbeit mit feraiQ verläuft seit Jahren äußerst professionell und zuverlässig. Anfragen werden schnell bearbeitet und Lösungen effizient umgesetzt. Besonders schätzen wir die kompetente Beratung und die hohe Servicequalität.",
-    },
-    {
-      customerName: "Mohammad Juma",
-      subject: "Sehr kompetenter Service",
-      content:
-        "Dank feraiQ können wir uns voll auf unser Kerngeschäft konzentrieren. Das Team reagiert schnell auf Anfragen, arbeitet lösungsorientiert und sorgt dafür, dass unsere IT-Infrastruktur jederzeit stabil und sicher läuft.",
-    },
-    {
-      customerName: "Qasimi",
-      subject: "Top IT Support",
-      content:
-        "Wir sind mit dem Service von feraiQ sehr zufrieden. Das Team verfügt über umfangreiches Fachwissen und unterstützt uns zuverlässig bei allen technischen Herausforderungen. Besonders hervorzuheben ist die persönliche und freundliche Betreuung.",
-    },
-    {
-      customerName: "Mohammad",
-      subject: "Starke IT-Partnerschaft",
-      content:
-        "feraiQ begleitet unser Unternehmen seit mehreren Jahren als vertrauenswürdiger IT-Partner. Von der täglichen Betreuung bis hin zu komplexen Projekten erhalten wir stets professionelle Unterstützung und maßgeschneiderte Lösungen.",
-    },
-    {
-      customerName: "Mohammad Qasimi",
-      subject: "Hervorragende Betreuung",
-      content:
-        "Die Zusammenarbeit mit feraiQ hat unsere internen Prozesse deutlich verbessert. Das Team arbeitet zuverlässig, transparent und mit einem hohen Qualitätsanspruch. Wir fühlen uns jederzeit bestens betreut.",
-    },
-  ];
+  const [isPaused, setIsPaused] = useState(false);
+
   useEffect(() => {
-    if (!testimonials.length) return;
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
+
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, [isPaused]);
 
-  if (!testimonials.length) return null;
   return (
-    <section
-      className="relative w-full min-h-[88vh] bg-cover bg-center py-10 md:py-20"
-      style={{ backgroundImage: `url(${bgTestmonial})` }}
-    >
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/50" />
+    <section className="relative overflow-hidden min-h-[88vh] py-12 md:py-24">
+      {/* Animated Background */}
+      <motion.div
+        initial={{ scale: 1.08 }}
+        whileInView={{ scale: 1 }}
+        transition={{
+          duration: 8,
+          ease: "easeOut",
+        }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bgTestmonial})`,
+        }}
+      />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 md:grid-cols-3">
-        {/* LEFT TEXT */}
-        <div className="text-white">
-          <h2 className="text-sm font-semibold font-quicksand uppercase tracking-widest">
-            Kundenstimmen
-          </h2>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
 
-          <h1 className="mt-3 text-3xl font-bold  font-quicksand leading-tight">
-            Was sagen unsere Kunden?
-          </h1>
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
+          {/* Left Content */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+            }}
+            className="text-white"
+          >
+            <span className="text-sm uppercase tracking-widest font-semibold text-sky-300">
+              Kundenstimmen
+            </span>
 
-          <p className="mt-6 text-lg font-semibold leading-relaxed text-white/80">
-            Seit 2025 machen wir IT mit Herzblut. Wir orientieren uns an den
-            individuellen Bedürfnissen unserer Kunden und seiner Branche.
-            <br />
-            <br />
-            Aufgrund unserer langjährigen Erfahrung und Kunden aus nahezu allen
-            Bereichen können wir auf einen großen Fundus an Best Practices
-            zurückgreifen.
-          </p>
-        </div>
+            <h2 className="mt-3 text-3xl md:text-5xl font-bold leading-tight">
+              Was sagen unsere Kunden?
+            </h2>
 
-        {/* RIGHT CARDS */}
-        <div className="md:col-span-2 grid grid-cols-1 ">
-          {/* ================= SLIDER ================= */}
-          <div className="relative min-h-[120px] flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 150, scale: 0.96 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -100, scale: 0.96 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="w-[90%] md:w-[70%]"
-              >
-                {/* <TestimonialCard
-                  subject={testimonials[index].subject}
-                  customerName={testimonials[index].customerName}
-                  content={testimonials[index].content}
-                /> */}
-                <TestimonialCard {...testimonials[index]} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
+            <p className="mt-6 text-lg leading-relaxed text-white/80">
+              Vertrauen, Zuverlässigkeit und langfristige Zusammenarbeit stehen
+              bei uns im Mittelpunkt.
+              <br />
+              <br />
+              Unsere Kunden profitieren von schnellen Reaktionszeiten,
+              persönlicher Betreuung und praxisnahen IT-Lösungen.
+            </p>
+          </motion.div>
 
-          <div className="flex justify-center gap-3 mt-10">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === index
-                    ? "w-10 bg-sky-700 shadow-[0_0_20px_rgba(99,102,241,0.7)]"
-                    : "w-2.5 bg-white/30 hover:bg-white/50"
-                }`}
-              />
-            ))}
+          {/* Slider */}
+          <div className="md:col-span-2 flex flex-col justify-center">
+            <div
+              className="relative flex min-h-[320px] items-center justify-center"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    x: 80,
+                    scale: 0.97,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    scale: 1,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    x: -80,
+                    scale: 0.97,
+                  }}
+                  transition={{
+                    duration: 0.55,
+                    ease: "easeOut",
+                  }}
+                  className="w-full md:w-[75%]"
+                >
+                  <TestimonialCard {...testimonials[index]} />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Dots */}
+            <div className="mt-10 flex justify-center gap-3">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setIndex(i)}
+                  aria-label={`testimonial-${i}`}
+                  className={`rounded-full transition-all duration-300 ${
+                    i === index
+                      ? "w-10 h-2.5 bg-[#1E2F97] "
+                      : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

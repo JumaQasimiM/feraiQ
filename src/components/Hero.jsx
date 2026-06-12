@@ -112,17 +112,17 @@ const Hero = () => {
             <motion.h1
               variants={itemVariants}
               className="
-                text-3xl
-                md:text-5xl
+                text-2xl
+                md:text-4xl
                 font-bold
                 text-white
                 leading-tight
                 font-quicksand
               "
             >
-              IT-Lösungen, die
+              Zuverlässige IT für
               <br />
-              einfach funktionieren
+              Unternehmen in deiner Region
             </motion.h1>
 
             {/* Desktop Text */}

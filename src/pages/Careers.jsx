@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 // icons
 import {
   FaLaptopCode,
@@ -100,9 +101,14 @@ const Careers = () => {
             {/* JOBS */}
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
               {jobs.map((job, index) => (
-                <div
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={index}
-                  className="border border-slate-200 rounded bg-white p-6 hover:border-sky-300 hover:shadow-sm transition"
+                  className="border border-slate-200 rounded bg-white p-6 hover:border-sky-300  "
                 >
                   {/* HEADER */}
                   <div className="flex justify-between items-start mb-4">
@@ -137,20 +143,24 @@ const Careers = () => {
                       <Link to={job.slug}>Bewerben →</Link>
                     </button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {/* CONTACT BOX */}
-            <div className=" h-fit">
-              <h3 className="text-lg font-semibold text-slate-900">
-                Deine Ansprechpartnerin --
-              </h3>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className=" h-fit"
+            >
+              <h3 className="text-lg font-semibold">Deine Ansprechpartnerin</h3>
 
               <img
                 src={ansprochpartner}
                 alt=""
-                className="h-[300px] mx-w-lg mt-4 mb-4"
+                className="h-[300px] w-full mt-4 mb-4 lg:object-cover object-contain"
               />
 
               <p className="text-sm text-slate-600 leading-relaxed">
@@ -163,13 +173,18 @@ const Careers = () => {
                 <p>jobs@feraiq.de</p>
                 <p>0049 876 893 458</p>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-24">
             {benefits.map((item, i) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
                 key={i}
-                className="p-8 border border-gray-200 rounded-lg bg-white hover:shadow-md transition"
+                className="p-8 border border-gray-200 rounded-lg bg-white "
               >
                 <div className="flex justify-center">
                   <h1 className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 text-2xl">
@@ -184,7 +199,7 @@ const Careers = () => {
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                   {item.text}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -201,10 +216,15 @@ const Careers = () => {
                 programming4,
                 programming5,
               ].map((img, i) => (
-                <img
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
                   key={i}
                   src={img}
-                  className="h-58 w-full object-cover hover:scale-103 transition"
+                  className="h-58 w-full object-cover "
                 />
               ))}
             </div>

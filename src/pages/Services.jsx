@@ -1,7 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaArrowDownLong } from "react-icons/fa6";
+
 import ITServiceOptions from "../components/ITServiceOptions";
 import ContactUs from "./ContactUs";
-import { FaArrowDownLong } from "react-icons/fa6";
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Services = () => {
   return (
     <section className="w-full">
@@ -11,58 +29,114 @@ const Services = () => {
       </div>
 
       {/* About Services */}
-      <div className="bg-white">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        className="bg-white"
+      >
         <div className="max-w-5xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+          <h2 className="text-3xl font-quicksand md:text-4xl font-bold text-slate-900 mb-8">
             Warum feraiQ?
           </h2>
 
-          <div className="space-y-6 text-slate-600 leading-8">
+          <div className="space-y-6 text-slate-600 leading-8 text-lg">
             <p>
-              Seit 2025 unterstützen wir Unternehmen mit professionellen
-              IT-Services. Unser Fokus liegt auf nachhaltigen Lösungen,
-              persönlicher Betreuung und modernster Technologie.
+              Wir unterstützen Unternehmen mit professionellen IT-Services und
+              einem klaren Fokus auf nachhaltige Lösungen, persönliche Betreuung
+              und moderne Technologien.
             </p>
 
             <p>
               Ob IT-Infrastruktur, Cloud-Lösungen, Support oder strategische
-              Beratung – wir entwickeln Konzepte, die exakt zu den Anforderungen
-              unserer Kunden passen.
+              Beratung – wir entwickeln Konzepte, die exakt auf die
+              Anforderungen Ihres Unternehmens zugeschnitten sind.
             </p>
 
             <p>
-              Dank unserer Erfahrung aus zahlreichen Projekten in
-              unterschiedlichsten Branchen profitieren unsere Kunden von
-              bewährten Prozessen und Best Practices.
+              Durch unsere Erfahrung aus unterschiedlichsten Projekten
+              profitieren unsere Kunden von bewährten Prozessen, effizienten
+              Abläufen und praxisnahen Lösungen.
             </p>
 
             <p>
               Unser Ziel ist es, IT einfach, sicher und effizient zu gestalten,
-              damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
+              damit Sie sich vollständig auf Ihr Kerngeschäft konzentrieren
+              können.
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* CTA */}
-      <div className="bg-sky-700">
-        <div className="max-w-7xl mx-auto px-6 py-16 text-center text-white">
-          <h2 className="text-3xl font-bold">Benötigen Sie Unterstützung?</h2>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.3,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        className="bg-[#1E2F97]"
+      >
+        <div className="max-w-7xl mx-auto px-6 py-20 text-center text-white">
+          <h2 className="text-3xl md:text-5xl font-bold">
+            Benötigen Sie Unterstützung?
+          </h2>
 
-          <p className="mt-4 max-w-2xl mx-auto text-white/90">
-            Unser Team berät Sie gerne zu Ihren IT-Anforderungen und findet die
-            passende Lösung für Ihr Unternehmen.
+          <p className="mt-5 max-w-2xl mx-auto text-white/85 text-lg">
+            Unser Team berät Sie gerne zu Ihren IT-Anforderungen und entwickelt
+            gemeinsam mit Ihnen die passende Lösung.
           </p>
 
-          <button className="mt-8 px-8 py-3 bg-white text-sky-800 rounded-lg font-semibold hover:bg-slate-100 transition">
-            <span className="flex justify-center items-center gap-1">
-              {" "}
-              Jetzt Kontakt aufnehmen{" "}
-              <FaArrowDownLong className="animate-bounce" />
-            </span>
-          </button>
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.98,
+            }}
+            className="
+              mt-10
+              inline-flex
+              items-center
+              gap-3
+              rounded-lg
+              bg-white
+              px-8
+              py-4
+              font-semibold
+              text-[#1E2F97]
+              shadow-lg
+            "
+          >
+            Jetzt Kontakt aufnehmen
+            <motion.span
+              animate={{
+                y: [0, 4, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.5,
+              }}
+            >
+              <FaArrowDownLong />
+            </motion.span>
+          </motion.button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Contact */}
       <div className="max-w-7xl mx-auto px-6 md:py-20">

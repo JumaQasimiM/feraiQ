@@ -1,49 +1,130 @@
 import React from "react";
+import { motion } from "motion/react";
 import WhyChooseUsCard from "./WhyChooseUsCard";
-import { FaUser } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
 import { BiTimer } from "react-icons/bi";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 const WhyChooseUs = () => {
   const whyChooseUsItem = [
     {
-      title: "Langjährige Erfahrung",
+      title: "Fundiertes IT-Know-how",
       description:
-        "Seit 2025 kümmern wir uns um jegliche IT-Belange unserer Kunden - immer mit dem Ziel der langfristigen Zusammenarbeit.",
+        "Wir unterstützen Unternehmen mit professionellen IT-Lösungen und einem klaren Fokus auf langfristige Partnerschaften.",
       icon: <FiFileText size={50} />,
     },
     {
-      title: "Gute Erreichbarkeit & Reaktionszeit",
+      title: "Schnelle Reaktionszeiten",
       description:
-        "Gute Erreichbarkeit ist für uns das A und O. Schnelle Reaktionszeit ist ebenso Standard - bei Bedarf auch 24/7.",
+        "Erreichbarkeit und schnelle Unterstützung sind für uns selbstverständlich – bei Bedarf auch außerhalb üblicher Geschäftszeiten.",
       icon: <BiTimer size={50} />,
     },
     {
-      title: "ösungsorientierte Arbeitsweise",
+      title: "Lösungsorientierte Arbeitsweise",
       description:
-        "Wir kümmern uns um Ihre IT-Probleme und Herausforderungen - zielgerichtet, schnell und wirtschaftlich.",
+        "Wir lösen IT-Herausforderungen effizient, wirtschaftlich und mit Blick auf Ihre Geschäftsziele.",
       icon: <FiFileText size={50} />,
     },
   ];
+
   return (
-    <section className="w-full bg-gray-100 py-5 my-10 ">
-      <div className="w-full md:max-w-7xl mx-auto px-5 py-5 md:my-10 text-center space-y-10 font-quicksand font-extrabold">
-        <h1 className="text-2xl md:text-5xl pb-1 md:pb-10">
-          Warum Sie sich <br />
-          für feraiQ entscheiden sollten
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <section className="w-full bg-gray-100 py-20">
+      <div className="mx-auto max-w-7xl px-5">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
+          className="text-center font-quicksand"
+        >
+          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+            Warum Sie sich
+            <br />
+            für feraiQ entscheiden sollten
+          </h2>
+        </motion.div>
+
+        {/* Cards */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3"
+        >
           {whyChooseUsItem.map((item, index) => (
-            <WhyChooseUsCard
-              key={index}
-              title={item.title}
-              icon={item.icon}
-              description={item.description}
-            />
+            <motion.div key={index} variants={itemVariants}>
+              <WhyChooseUsCard
+                title={item.title}
+                icon={item.icon}
+                description={item.description}
+              />
+            </motion.div>
           ))}
-        </div>
-        <button className="py-4 px-10 bg-[#1e2f97] text-white">
-          Jetzt beraten lassen
-        </button>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.5,
+            duration: 0.6,
+          }}
+          className="mt-14 text-center"
+        >
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.98,
+            }}
+            className="
+              rounded
+              bg-[#1E2F97]
+              px-10
+              py-4
+              text-white
+              font-medium
+              shadow-lg
+            "
+          >
+            Jetzt beraten lassen
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

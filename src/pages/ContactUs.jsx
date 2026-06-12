@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "motion/react";
 // icons
 import { IoLocationOutline } from "react-icons/io5";
 import { BsTelephoneForward } from "react-icons/bs";
@@ -25,7 +25,24 @@ const ContactUs = () => {
   ];
 
   return (
-    <section className="w-full py-16">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 30,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.8,
+      }}
+      className="w-full py-16"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* header */}
         <div className="text-center mb-12 space-y-5">
@@ -56,7 +73,7 @@ const ContactUs = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import MarqueeModule from "react-fast-marquee";
 
 // Icons
@@ -18,7 +19,7 @@ import {
   SiMongodb,
 } from "react-icons/si";
 
-// Logos
+// Demo Logos (Portfolio)
 import lidl from "../assets/lidl-seeklogo.png";
 import kaufland from "../assets/kaufland.png";
 import amazon from "../assets/amazon.png";
@@ -28,25 +29,43 @@ import microsoft from "../assets/Microsoft-Logo.png";
 import tiktok from "../assets/tiktok.png";
 import facebook from "../assets/facebook.png";
 import nike from "../assets/Nike-Logo.png";
+
 const PartnersAndTechnologies = () => {
   const Marquee = MarqueeModule.default || MarqueeModule;
 
-  // TECHNOLOGIES
   const technologies = [
-    { name: "HTML5", icon: <FaHtml5 size={40} className="text-orange-500" /> },
-    { name: "CSS3", icon: <FaCss3Alt size={40} className="text-blue-600" /> },
+    {
+      name: "HTML5",
+      icon: <FaHtml5 size={40} className="text-orange-500" />,
+    },
+    {
+      name: "CSS3",
+      icon: <FaCss3Alt size={40} className="text-blue-600" />,
+    },
     {
       name: "JavaScript",
       icon: <SiJavascript size={40} className="text-yellow-400" />,
     },
-    { name: "React", icon: <FaReact size={40} className="text-cyan-400" /> },
+    {
+      name: "React",
+      icon: <FaReact size={40} className="text-cyan-400" />,
+    },
     {
       name: "Tailwind CSS",
       icon: <SiTailwindcss size={40} className="text-sky-400" />,
     },
-    { name: "Java", icon: <FaJava size={40} className="text-red-600" /> },
-    { name: "Python", icon: <FaPython size={40} className="text-sky-900" /> },
-    { name: "MySQL", icon: <SiMysql size={40} className="text-sky-900" /> },
+    {
+      name: "Java",
+      icon: <FaJava size={40} className="text-red-600" />,
+    },
+    {
+      name: "Python",
+      icon: <FaPython size={40} className="text-sky-900" />,
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql size={40} className="text-sky-900" />,
+    },
     {
       name: "MongoDB",
       icon: <SiMongodb size={40} className="text-green-600" />,
@@ -57,8 +76,7 @@ const PartnersAndTechnologies = () => {
     },
   ];
 
-  // CUSTOMERS
-  const customers = [
+  const brands = [
     lidl,
     kaufland,
     amazon,
@@ -71,55 +89,179 @@ const PartnersAndTechnologies = () => {
   ];
 
   return (
-    <section className="my-24 w-full py-5 md:py-20 z-100 font-quicksand font-extrabold">
+    <section className="relative my-12 w-full py-10 md:py-20 font-quicksand">
       <div className="mx-auto max-w-7xl px-6">
-        {/* HEADER */}
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="text-sm  uppercase tracking-widest ">
-            Zusammenarbeit, die Ergebnisse liefert
+        {/* Header */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
+          className="mx-auto max-w-3xl text-center"
+        >
+          <span className="text-sm uppercase tracking-widest text-[#1E2F97] font-semibold">
+            Demo-Projekt für Lern- und Portfoliozwecke
           </span>
 
-          <h2 className="mt-3 text-2xl md:text-5xl font-extrabold text-slate-900">
-            Technologien & Langjährige Kunden
+          <h2 className="mt-3 text-3xl md:text-5xl font-extrabold text-slate-900">
+            Technologien & Beispielunternehmen
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-slate-600">
-            Mit Fokus auf Qualität und Vertrauen entwickeln wir digitale
-            Lösungen, die echte Ergebnisse für Unternehmen schaffen.
+            Dieses Projekt dient ausschließlich Demonstrations- und Lernzwecken.
+            Die dargestellten Technologien und Logos werden als visuelle
+            Beispiele verwendet.
           </p>
-        </div>
+        </motion.div>
 
-        {/* TECHNOLOGIES */}
-        <div className="mt-16">
+        {/* Technologies */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            delay: 0.2,
+            duration: 0.8,
+          }}
+          className="mt-16"
+        >
           <Marquee speed={30} gradient={false} pauseOnHover>
             {technologies.map((tech, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="mx-2 md:mx-4 px-4 py-2 md:px-8 md:py-5 flex items-center gap-4 rounded border border-slate-300 bg-white/70  shadow-sm cursor-pointer"
+                whileHover={{
+                  y: -4,
+                  scale: 1.03,
+                }}
+                transition={{
+                  duration: 0.2,
+                }}
+                className="
+                  mx-2
+                  md:mx-4
+                  flex
+                  items-center
+                  gap-4
+                  rounded
+                  border
+                  border-slate-200
+                  bg-white
+                  px-5
+                  py-3
+                  md:px-8
+                  md:py-5
+                  cursor-pointer
+                "
               >
-                <span>{tech.icon}</span>
+                <motion.span
+                  whileHover={{
+                    scale: 1.15,
+                    rotate: 5,
+                  }}
+                >
+                  {tech.icon}
+                </motion.span>
+
                 <span className="text-lg font-semibold text-slate-800">
                   {tech.name}
                 </span>
-              </div>
+              </motion.div>
             ))}
           </Marquee>
-        </div>
+        </motion.div>
 
-        {/* CUSTOMERS */}
-        <div className="mt-10 md:mt-20">
+        {/* Example Brands */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+          }}
+          className="mt-16 md:mt-24"
+        >
           <Marquee speed={20} direction="right" gradient={false} pauseOnHover>
-            {customers.map((customer, index) => (
-              <div key={index} className="mx-5 md:mx-8 flex items-center">
+            {brands.map((brand, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                className="mx-5 md:mx-8 flex items-center"
+              >
                 <img
-                  src={customer}
-                  alt="customer"
-                  className="h-12 md:h-20 w-auto object-contain opacity-70 transition hover:grayscale-0 hover:opacity-100 cursor-pointer"
+                  src={brand}
+                  alt="Demo Brand"
+                  className="
+                    h-12
+                    md:h-20
+                    w-auto
+                    object-contain
+                    grayscale
+                    opacity-60
+                    transition-all
+                    duration-300
+                    hover:grayscale-0
+                    hover:opacity-100
+                  "
                 />
-              </div>
+              </motion.div>
             ))}
           </Marquee>
-        </div>
+        </motion.div>
+
+        {/* Disclaimer */}
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.8,
+          }}
+          className="mt-10 text-center"
+        >
+          <p className="text-xs text-slate-500">
+            * Alle dargestellten Marken und Logos dienen ausschließlich zu
+            Demonstrationszwecken innerhalb dieses Portfolio-Projekts und
+            stellen keine tatsächlichen Kundenbeziehungen oder Partnerschaften
+            dar.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
