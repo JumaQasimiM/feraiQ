@@ -10,7 +10,7 @@ https://feraiq.netlify.app/
 
 ---
 
-## 🧠 Overview
+## Overview
 
 feraiQ provides a unified platform for:
 
@@ -23,7 +23,7 @@ The system is built with a focus on scalability, performance, and modern UI/UX s
 
 ---
 
-## ✨ Features
+## Features
 
 - ⚡ Fast and modern React + Vite architecture
 - 📰 Dynamic news system (CMS-style content rendering)
@@ -36,17 +36,21 @@ The system is built with a focus on scalability, performance, and modern UI/UX s
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 src/
-├── components/
-├── hooks/
-├── pages/
-├── api/
-├── data/db.json
-└── main.jsx
 
----
+├── components/
+|
+├── hooks/
+|
+├── pages/
+|
+├── api/
+|
+├── data/db.json
+|
+└── main.jsx
 
 ---
 
@@ -63,7 +67,7 @@ src/
 
 ---
 
-## 📦 Installation
+## Installation
 
 Clone the repository:
 
@@ -105,33 +109,37 @@ It includes:
 
 News:
 
-> {
+>
 
-    "title": "Example News",
-    "slug": "example-news",
-    "desc": "Short description",
-    "content": [
-    { "type": "paragraph", "text": "..." },
-    { "type": "image", "url": "...", "caption": "..." },
-    { "type": "list", "title": "...", "items": [] },
-    { "type": "quote", "text": "..." }
-    ]
+    {
+        "title": "Example News",
+        "slug": "example-news",
+        "desc": "Short description",
+        "content": [
+            { "type": "paragraph", "text": "..." },
+            { "type": "image", "url": "...", "caption": "..." },
+            { "type": "list", "title": "...", "items": [] },
+            { "type": "quote", "text": "..." }
+        ]
     }
 
 JOBS:
-{
-"title": "Frontend Developer",
-"location": "Berlin / Remote",
-"type": "Full-time",
-"description": "Long job description...",
-"tasks": [],
-"profile": [],
-"benefits": []
-}
+
+>
+
+    {
+        "title": "Frontend Developer",
+        "location": "Berlin / Remote",
+        "type": "Full-time",
+        "description": "Long job description...",
+        "tasks": [],
+        "profile": [],
+        "benefits": []
+    }
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 - 🌐 Backend API integration (Node.js / Express)
 - 🔐 Admin dashboard for content management
@@ -141,7 +149,7 @@ JOBS:
 
 ---
 
-## 🏢 Company Focus
+## Company Focus
 
 feraiQ focuses on delivering:
 
