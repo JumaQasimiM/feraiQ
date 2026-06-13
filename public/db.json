@@ -1,0 +1,405 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Frontend Developer (React)",
+      "slug": "frontend-developer-react",
+      "location": "Berlin / Remote",
+      "type": "Full-time",
+      "description": "Wir suchen einen React Developer mit Erfahrung in modernen Web-Apps und UI/UX Umsetzung.",
+      "tasks": [
+        "Entwicklung moderner Webanwendungen mit React",
+        "Umsetzung von UI/UX Designs in performante Frontends",
+        "Integration von REST APIs",
+        "Aufbau skalierbarer Frontend-Architekturen",
+        "Code Reviews und Testing"
+      ],
+      "profile": [
+        "Erfahrung mit React und TypeScript",
+        "Gute Kenntnisse in JavaScript",
+        "Verständnis für moderne Webarchitektur",
+        "Teamfähigkeit und Eigeninitiative",
+        "Gute Deutsch- und Englischkenntnisse"
+      ],
+      "benefits": [
+        "Remote Work möglich",
+        "Flexible Arbeitszeiten",
+        "Modernes Tech-Stack",
+        "Weiterbildungen und Trainings",
+        "Attraktives Gehalt"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Backend Developer (Node.js)",
+      "slug": "backend-developer-nodejs",
+      "location": "Remote",
+      "type": "Part-time",
+      "description": "Entwicklung und Wartung skalierbarer Backend-Services und APIs.",
+      "tasks": [
+        "Entwicklung von REST APIs mit Node.js",
+        "Datenbankdesign und -optimierung",
+        "Integration externer Services",
+        "Performance Optimierung",
+        "Bug Fixing und Wartung"
+      ],
+      "profile": [
+        "Erfahrung mit Node.js und Express",
+        "Kenntnisse in SQL oder NoSQL Datenbanken",
+        "API Design Verständnis",
+        "Selbstständige Arbeitsweise",
+        "Englischkenntnisse"
+      ],
+      "benefits": [
+        "Remote Arbeit",
+        "Flexible Zeiten",
+        "Technische Verantwortung",
+        "Moderne Tools",
+        "Weiterentwicklungsmöglichkeiten"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "IT Support Specialist",
+      "slug": "it-support-specialist",
+      "location": "Berlin",
+      "type": "Full-time",
+      "description": "Unterstützung von Kunden bei technischen Problemen und IT-Systemen.",
+      "tasks": [
+        "Bearbeitung von Support-Anfragen",
+        "Fehleranalyse und Troubleshooting",
+        "Installation und Konfiguration von Software",
+        "Dokumentation von Lösungen",
+        "Kundenkommunikation"
+      ],
+      "profile": [
+        "IT Grundkenntnisse",
+        "Erfahrung im Support von Vorteil",
+        "Kommunikationsstärke",
+        "Serviceorientierung",
+        "Deutsch fließend"
+      ],
+      "benefits": [
+        "Sicherer Arbeitsplatz",
+        "Teamorientiertes Umfeld",
+        "Weiterbildungsmöglichkeiten",
+        "Zentrale Lage in Berlin",
+        "Feste Arbeitszeiten"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Full Stack Developer",
+      "slug": "fullstack-developer",
+      "location": "Berlin / Remote",
+      "type": "Full-time",
+      "description": "Entwicklung moderner Webanwendungen von Frontend bis Backend.",
+      "tasks": [
+        "Frontend Entwicklung mit React",
+        "Backend Entwicklung mit Node.js",
+        "API Entwicklung und Integration",
+        "Datenbankdesign",
+        "Deployment und Wartung"
+      ],
+      "profile": [
+        "Erfahrung in Full Stack Entwicklung",
+        "Kenntnisse in React und Node.js",
+        "SQL/NoSQL Erfahrung",
+        "DevOps Grundkenntnisse",
+        "Teamfähigkeit"
+      ],
+      "benefits": [
+        "Flexible Arbeitsmodelle",
+        "Modernes Tech-Stack",
+        "Eigenverantwortung",
+        "Weiterbildung",
+        "Attraktives Gehalt"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "UI/UX Designer",
+      "slug": "ui-ux-designer",
+      "location": "Remote",
+      "type": "Part-time",
+      "description": "Gestaltung moderner und benutzerfreundlicher Interfaces.",
+      "tasks": [
+        "Erstellung von UI Designs",
+        "User Experience Research",
+        "Prototyping in Figma",
+        "Zusammenarbeit mit Entwicklern",
+        "Optimierung bestehender Designs"
+      ],
+      "profile": [
+        "Erfahrung mit Figma oder Sketch",
+        "Verständnis für UX Prinzipien",
+        "Kreativität und Designgefühl",
+        "Portfolio erforderlich",
+        "Teamarbeit"
+      ],
+      "benefits": [
+        "Remote Arbeit",
+        "Kreative Freiheit",
+        "Flexible Zeiten",
+        "Spannende Projekte",
+        "Weiterentwicklung"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "DevOps Engineer",
+      "slug": "devops-engineer",
+      "location": "Berlin",
+      "type": "Full-time",
+      "description": "Aufbau und Betreuung moderner Cloud-Infrastrukturen.",
+      "tasks": [
+        "CI/CD Pipelines aufbauen",
+        "Cloud Infrastruktur verwalten",
+        "Monitoring und Logging",
+        "Automatisierung von Deployments",
+        "Systemoptimierung"
+      ],
+      "profile": [
+        "Erfahrung mit AWS oder Azure",
+        "Kenntnisse in Docker und Kubernetes",
+        "Linux Erfahrung",
+        "Scripting Fähigkeiten",
+        "Analytisches Denken"
+      ],
+      "benefits": [
+        "High-Tech Umfeld",
+        "Flexible Arbeitszeiten",
+        "Remote Optionen",
+        "Weiterbildung im Cloud Bereich",
+        "Sehr gutes Gehalt"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "KI verändert die Softwareentwicklung nachhaltig",
+      "slug": "ki-veraendert-die-softwareentwicklung-nachhaltig",
+      "tag": "KI",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=60",
+      "desc": "Künstliche Intelligenz entwickelt sich rasant und verändert die Art und Weise, wie Software entwickelt, getestet und betrieben wird. Unternehmen investieren weltweit Milliardenbeträge in KI-Technologien, um Entwicklungsprozesse zu beschleunigen, Kosten zu reduzieren und die Qualität ihrer Produkte zu verbessern. Experten sind sich einig, dass KI in den kommenden Jahren ein zentraler Bestandteil nahezu jeder modernen Softwarelösung sein wird.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Die Softwareentwicklung befindet sich in einem grundlegenden Wandel. Moderne KI-Systeme unterstützen Entwickler bereits heute bei der Codegenerierung, Fehleranalyse und Dokumentation. Dadurch können Teams schneller arbeiten und sich stärker auf Architektur, Produktstrategie und komplexe Geschäftsanforderungen konzentrieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Besonders große Technologieunternehmen investieren massiv in KI-gestützte Entwicklungswerkzeuge. Tools wie GitHub Copilot, ChatGPT oder intelligente Testing-Plattformen ermöglichen eine deutliche Produktivitätssteigerung und reduzieren repetitive Aufgaben im Arbeitsalltag."
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=60",
+          "caption": "KI-gestützte Tools unterstützen Entwickler in nahezu jeder Projektphase."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neben der Produktivität spielt auch die Qualitätssicherung eine wichtige Rolle. KI kann potenzielle Sicherheitslücken erkennen, Code analysieren und Verbesserungsvorschläge liefern. Dadurch entstehen robustere Anwendungen mit geringeren Wartungskosten."
+        },
+        {
+          "type": "list",
+          "title": "Wichtige Vorteile von KI in der Softwareentwicklung",
+          "items": [
+            "Schnellere Entwicklung neuer Funktionen",
+            "Automatisierte Tests und Qualitätskontrollen",
+            "Reduzierung von Fehlern und Sicherheitsrisiken",
+            "Verbesserte Dokumentation",
+            "Effizientere Zusammenarbeit in Teams",
+            "Schnelleres Prototyping neuer Ideen"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "KI wird Entwickler nicht ersetzen, sondern ihre Fähigkeiten erheblich erweitern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viele Unternehmen berichten bereits von deutlich kürzeren Entwicklungszyklen. Gleichzeitig entstehen neue Anforderungen an Entwickler, da Kenntnisse über KI-Systeme, Datenmodelle und Automatisierung zunehmend wichtiger werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Langfristig erwarten Experten eine enge Zusammenarbeit zwischen Menschen und intelligenten Systemen. Entwickler werden sich stärker auf kreative Problemlösung und strategische Entscheidungen konzentrieren, während KI Routineaufgaben übernimmt."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Remote Work bleibt fester Bestandteil moderner Unternehmen",
+      "slug": "remote-work-bleibt-fester-bestandteil-moderner-unternehmen",
+      "tag": "Business",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=60",
+      "desc": "Flexible Arbeitsmodelle haben sich in den vergangenen Jahren etabliert und werden von Unternehmen weltweit als wichtiger Wettbewerbsvorteil betrachtet. Viele Firmen setzen dauerhaft auf hybride oder vollständig remote Arbeitsplätze.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Remote Work hat die Arbeitswelt nachhaltig verändert. Unternehmen erkennen zunehmend, dass flexible Arbeitsmodelle nicht nur die Zufriedenheit der Mitarbeiter erhöhen, sondern auch die Produktivität steigern können."
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=60",
+          "caption": "Hybride Arbeitsmodelle gewinnen weltweit an Bedeutung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viele Organisationen investieren in digitale Infrastruktur, Cloud-Plattformen und moderne Kollaborationstools, um verteilte Teams effizient zu unterstützen."
+        },
+        {
+          "type": "list",
+          "title": "Vorteile von Remote Work",
+          "items": [
+            "Mehr Flexibilität",
+            "Höhere Mitarbeiterzufriedenheit",
+            "Weniger Pendelzeit",
+            "Internationale Talentgewinnung",
+            "Geringere Betriebskosten"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "Remote Work ist längst kein Trend mehr, sondern ein fester Bestandteil moderner Unternehmenskultur."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Künstliche Intelligenz revolutioniert den Kundenservice",
+      "slug": "kuenstliche-intelligenz-revolutioniert-den-kundenservice",
+      "tag": "KI",
+      "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1400&q=60",
+      "desc": "Immer mehr Unternehmen setzen auf KI-basierte Chatbots und Assistenzsysteme, um Kundenanfragen schneller und effizienter zu bearbeiten.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Künstliche Intelligenz verändert den Kundenservice grundlegend. Moderne Systeme können Anfragen analysieren, priorisieren und oft vollständig automatisiert beantworten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dadurch profitieren Unternehmen von schnelleren Reaktionszeiten und einer höheren Kundenzufriedenheit. Gleichzeitig werden Support-Teams entlastet."
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=60",
+          "caption": "KI-gestützte Systeme beantworten Millionen von Kundenanfragen."
+        },
+        {
+          "type": "list",
+          "title": "Einsatzbereiche",
+          "items": [
+            "Live Chat Support",
+            "Automatische Ticketbearbeitung",
+            "Spracherkennung",
+            "Personalisierte Empfehlungen"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "Die Zukunft des Kundenservice wird durch intelligente Automatisierung geprägt sein."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "5G-Netze beschleunigen die digitale Transformation",
+      "slug": "5g-netze-beschleunigen-die-digitale-transformation",
+      "tag": "Technologie",
+      "image": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=60",
+      "desc": "Mit dem Ausbau von 5G entstehen neue Möglichkeiten für Unternehmen, Smart Cities und vernetzte Industrieanwendungen.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "5G bietet deutlich höhere Übertragungsraten und geringere Latenzzeiten als frühere Mobilfunkstandards. Dadurch entstehen völlig neue Anwendungsmöglichkeiten."
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=60",
+          "caption": "5G bildet die Grundlage für die nächste Generation digitaler Dienste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Von autonomen Fahrzeugen bis hin zu intelligenten Fabriken profitieren zahlreiche Branchen von der neuen Infrastruktur."
+        },
+        {
+          "type": "list",
+          "title": "Mögliche Anwendungen",
+          "items": [
+            "Smart Cities",
+            "Autonomes Fahren",
+            "Industrie 4.0",
+            "Telemedizin",
+            "IoT-Systeme"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Nachhaltige Rechenzentren gewinnen an Bedeutung",
+      "slug": "nachhaltige-rechenzentren-gewinnen-an-bedeutung",
+      "tag": "Green IT",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=60",
+      "desc": "Angesichts steigender Energiekosten investieren Technologieunternehmen verstärkt in nachhaltige und energieeffiziente Rechenzentren.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Moderne Rechenzentren verbrauchen enorme Mengen an Energie. Daher suchen Unternehmen nach innovativen Wegen, ihren ökologischen Fußabdruck zu reduzieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Einsatz erneuerbarer Energien, effizienter Kühlsysteme und intelligenter Lastverteilung trägt dazu bei, Ressourcen zu sparen."
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=60",
+          "caption": "Nachhaltige Infrastruktur wird zu einem entscheidenden Wettbewerbsfaktor."
+        },
+        {
+          "type": "quote",
+          "text": "Green IT ist nicht nur gut für die Umwelt, sondern auch wirtschaftlich sinnvoll."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Cybersecurity-Investitionen erreichen Rekordniveau",
+      "slug": "cybersecurity-investitionen-erreichen-rekordniveau",
+      "tag": "Security",
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=60",
+      "desc": "Aufgrund zunehmender Cyberangriffe erhöhen Unternehmen weltweit ihre Investitionen in Sicherheitslösungen und Risikomanagement.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Die Zahl der Cyberangriffe wächst kontinuierlich. Unternehmen stehen vor der Herausforderung, sensible Daten und digitale Infrastrukturen effektiv zu schützen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neben technischen Maßnahmen gewinnen auch Schulungen und Sicherheitsrichtlinien zunehmend an Bedeutung."
+        },
+        {
+          "type": "image",
+          "url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=60",
+          "caption": "Cybersecurity bleibt eine zentrale Herausforderung für Unternehmen."
+        },
+        {
+          "type": "list",
+          "title": "Wichtige Sicherheitsmaßnahmen",
+          "items": [
+            "Multi-Faktor-Authentifizierung",
+            "Regelmäßige Backups",
+            "Security Monitoring",
+            "Mitarbeiterschulungen",
+            "Zero-Trust-Strategien"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "Sicherheit ist kein Produkt, sondern ein kontinuierlicher Prozess."
+        }
+      ]
+    }
+  ]
+}

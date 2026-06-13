@@ -10,6 +10,7 @@ import Careers from "./pages/Careers";
 import Career_detail from "./pages/Career_detail";
 import Services from "./pages/Services";
 import TechNewsPage from "./pages/TechNewsPage";
+import NewsDetail from "./pages/NewsDetail";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/careers/:slug" element={<Career_detail />} />
         <Route path="/services/" element={<Services />} />
         <Route path="/news/" element={<TechNewsPage />} />
+        <Route path="/news/:slug" element={<NewsDetail />} />
       </Routes>
 
       <Footer />

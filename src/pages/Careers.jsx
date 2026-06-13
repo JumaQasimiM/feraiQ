@@ -89,7 +89,9 @@ const Careers = () => {
   // const { data: jobs } = useFetch("http://localhost:5000/jobs");
 
   /** ==============reqct query======== */
-  const { data: jobs = [] } = useJobs();
+  const { data } = useJobs();
+
+  const jobs = data?.jobs || [];
   return (
     <>
       {/* herder */}

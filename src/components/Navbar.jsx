@@ -47,7 +47,7 @@ const Navbar = () => {
                 >
                   {({ isActive }) => (
                     <>
-                      {item.name}
+                      {item.name.toUpperCase()}
 
                       <span
                         className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#1E2F97] transition-all duration-300 ${

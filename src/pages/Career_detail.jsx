@@ -57,10 +57,10 @@ const Section = ({ title, items }) => {
 
 const Career_detail = () => {
   const { slug } = useParams();
-  const { data: job, isLoading, isError } = useJob(slug);
+  const { data: job, isPending, isError } = useJob(slug);
 
   /* loading */
-  if (isLoading) {
+  if (isPending) {
     return (
       <div className="max-w-7xl mx-auto px-6 py-20 text-center text-slate-500">
         Loading job details...
@@ -85,7 +85,7 @@ const Career_detail = () => {
       className="max-w-7xl mx-auto px-6"
     >
       {/* HERO IMAGE */}
-      <motion.div variants={fadeUp} className="overflow-hidden rounded-lg">
+      <motion.div variants={fadeUp} className="overflow-hidden rounded">
         <motion.img
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}

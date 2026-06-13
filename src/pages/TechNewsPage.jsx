@@ -1,38 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import programming from "../assets/programing.png";
+import programming1 from "../assets/programing1.jpg";
+import programming2 from "../assets/programing2.jpg";
+import programming3 from "../assets/programing4.jpg";
+import programming4 from "../assets/programing3.jpg";
+import programming5 from "../assets/programing5.jpg";
+import ansprochpartner from "../assets/ansprochpartner.jpg";
+import { Link } from "react-router-dom";
+import { useNews } from "../hooks/useNews";
 
-const news = [
-  {
-    title: "KI verändert die Softwareentwicklung nachhaltig",
-    desc: "Unternehmen setzen zunehmend auf künstliche Intelligenz zur Optimierung ihrer Prozesse.",
-    tag: "KI",
-  },
-  {
-    title: "Cloud-Infrastruktur wird zum Standard",
-    desc: "Skalierbare Cloud-Lösungen ersetzen klassische Server-Strukturen in Unternehmen.",
-    tag: "Cloud",
-  },
-  {
-    title: "Cybersecurity bleibt Top-Priorität",
-    desc: "IT-Sicherheit gewinnt durch steigende Bedrohungen immer mehr an Bedeutung.",
-    tag: "Security",
-  },
-  {
-    title: "Moderne Webentwicklung mit React",
-    desc: "React bleibt eines der wichtigsten Tools im Frontend-Development.",
-    tag: "Web",
-  },
-  {
-    title: "DevOps beschleunigt IT-Prozesse",
-    desc: "Automatisierung verbessert Deployment und Softwarequalität erheblich.",
-    tag: "DevOps",
-  },
-  {
-    title: "Data Analytics für bessere Entscheidungen",
-    desc: "Unternehmen nutzen Daten, um strategisch bessere Entscheidungen zu treffen.",
-    tag: "Data",
-  },
-];
+// ======= start animation motion ======
 
 const container = {
   hidden: { opacity: 0 },
@@ -53,7 +31,12 @@ const item = {
   },
 };
 
+// =========== end animation montin =====
 const TechNewsGermany = () => {
+  // get data
+  const { data } = useNews();
+  const news = data?.news || [];
+
   return (
     <section className="min-h-screen py-20 px-6">
       {/* HEADER */}
@@ -83,8 +66,15 @@ const TechNewsGermany = () => {
           <motion.div
             key={i}
             variants={item}
-            className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            className="border border-gray-200 rounded p-6 bg-white "
           >
+            <div>
+              <img
+                src={item.image}
+                alt=""
+                className="hover:scale-103 transition-all duration-300"
+              />
+            </div>
             {/* TAG */}
             <span className="text-xs font-semibold text-blue-600 uppercase">
               {item.tag}
@@ -101,9 +91,11 @@ const TechNewsGermany = () => {
             </p>
 
             {/* READ MORE */}
-            <button className="mt-5 text-blue-600 font-medium hover:underline">
-              Mehr lesen →
-            </button>
+            <Link to={`/news/${item.slug}`}>
+              <button className="mt-5 text-blue-600 font-medium hover:underline">
+                Mehr lesen →
+              </button>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
