@@ -1,14 +1,20 @@
 ## feraiQ – AI & Digital Solutions Platform
 
+---
+
+### Live Demo [Click here to view the live demo](https://feraiq.netlify.app/)
+
+---
+
 feraiQ is a modern digital platform built for a technology company that delivers **AI solutions, web development services, tech news, and IT job opportunities**.
 
 The platform is designed to showcase company services, publish technology content, and connect talent with opportunities in the digital industry.
 
----
-
-https://feraiq.netlify.app/
-
----
+![React](https://img.shields.io/badge/React-19-%2361DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-7-%646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-%2338B2AC?logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ## Overview
 
@@ -38,23 +44,25 @@ The system is built with a focus on scalability, performance, and modern UI/UX s
 
 ## Project Structure
 
-src/
-
-├── components/
-|
-├── hooks/
-|
-├── pages/
-|
-├── api/
-|
-├── data/db.json
-|
-└── main.jsx
+    src/
+    ├── components/
+    ├── hooks/
+    ├── pages/
+    ├── api/
+    ├── data/db.json
+    └── main.jsx
 
 ---
 
 ## ⚙️ Tech Stack
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![JavaScript ES6](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![React Router](https://img.shields.io/badge/React_Router_DOM-7-CA4245?logo=reactrouter&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC?logo=tailwindcss&logoColor=white)
+![React Icons](https://img.shields.io/badge/React_Icons-Icons-purple)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animations-0055FF?logo=framer)
+![Custom Hooks](https://img.shields.io/badge/React-Custom_Hooks-lightblue)
 
 - React.js
 - Vite
@@ -159,3 +167,14 @@ feraiQ focuses on delivering:
 - Digital transformation services
 
 ---
+
+## Author
+
+**Mohammad Juma Qasimi**  
+**_Frontend Developer | React.js_**
+
+> Building modern, scalable, and user-friendly web interfaces.
+
+- Clean UI / UX
+- Scalable frontend architecture
+- Continuous learning mindset
