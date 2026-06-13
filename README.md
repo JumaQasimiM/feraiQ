@@ -1,12 +1,10 @@
-# 🚀 feraiQ – AI & Digital Solutions Platform
+## feraiQ – AI & Digital Solutions Platform
 
 feraiQ is a modern digital platform built for a technology company that delivers **AI solutions, web development services, tech news, and IT job opportunities**.
 
 The platform is designed to showcase company services, publish technology content, and connect talent with opportunities in the digital industry.
 
 ---
-
-## 🌐 Live Website
 
 https://feraiq.netlify.app/
 
@@ -70,15 +68,26 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/feraiq.git
+git clone https://github.com/JumaQasimiM/feraiQ.git
 ```
 
 Install dependencies:
+
+```bash
 npm install
+```
+
 Run the development server:
+
+```bash
 npm run dev
+```
+
 Build for production:
+
+```bash
 npm run build
+```
 
 ## 📊 Data Source
 
@@ -95,17 +104,19 @@ It includes:
 🧩 Example Content Model
 
 News:
-{
-"title": "Example News",
-"slug": "example-news",
-"desc": "Short description",
-"content": [
-{ "type": "paragraph", "text": "..." },
-{ "type": "image", "url": "...", "caption": "..." },
-{ "type": "list", "title": "...", "items": [] },
-{ "type": "quote", "text": "..." }
-]
-}
+
+> {
+
+    "title": "Example News",
+    "slug": "example-news",
+    "desc": "Short description",
+    "content": [
+    { "type": "paragraph", "text": "..." },
+    { "type": "image", "url": "...", "caption": "..." },
+    { "type": "list", "title": "...", "items": [] },
+    { "type": "quote", "text": "..." }
+    ]
+    }
 
 JOBS:
 {
