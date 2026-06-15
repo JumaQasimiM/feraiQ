@@ -85,13 +85,16 @@ const imageAnim = {
   },
 };
 const Careers = () => {
+  const [filter, setFilter] = useState("all");
   /** =============fetch data[custom hook] from api=============== */
   // const { data: jobs } = useFetch("http://localhost:5000/jobs");
 
   /** ==============reqct query======== */
-  const { data } = useJobs();
-
+  const { data } = useJobs(filter);
+  console.log(filter);
   const jobs = data?.jobs || [];
+
+  const filterItem = ["all", "Part-time", "Full-time"];
   return (
     <>
       {/* herder */}
@@ -155,18 +158,35 @@ const Careers = () => {
       <section className="w-full py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           {/* MAIN LAYOUT */}
+          {/* filter section */}
+          <div className="flex justify-start items-center gap-5 mb-3 cursor-pointer">
+            {filterItem.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => setFilter(item)}
+                className={`py-2 px-3 transition-all cursor-pointer ${
+                  filter === item
+                    ? "bg-[#1c2ea5] text-white font-semibold"
+                    : "bg-[#263dd2] text-white"
+                }`}
+              >
+                {item.toUpperCase()}
+              </button>
+            ))}
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
             {/* JOBS */}
+
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
               {jobs.map((job, index) => (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={index}
-                  className="border border-slate-200 rounded bg-white p-6 hover:border-[#263dd2]  "
+                  className="h-50 border border-slate-200 rounded bg-white p-6 hover:border-[#263dd2]  "
                 >
                   {/* HEADER */}
                   <div className="flex justify-between items-start mb-4">
