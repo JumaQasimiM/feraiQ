@@ -1,7 +1,8 @@
 import { fetchData } from "./api";
 
 export const getJobs = () => {
-  return fetchData("/db.json");
+  let url = "/db.json";
+  return fetchData(url);
 };
 
 // Read jobs from the local JSON file in /public/db.json
