@@ -86,14 +86,20 @@ const imageAnim = {
 };
 const Careers = () => {
   const [filter, setFilter] = useState("all");
-  /** =============fetch data[custom hook] from api=============== */
-  // const { data: jobs } = useFetch("http://localhost:5000/jobs");
-
+  // pagenation - client side pagenation
+  const [page, setPage] = useState(1);
+  const perPage = 5;
   /** ==============reqct query======== */
   const { data } = useJobs(filter);
   console.log(filter);
   const jobs = data?.jobs || [];
 
+  // pagenation
+  const startPage = (page - 1) * perPage;
+  const paginatedJobs = jobs.slice(startPage, startPage + perPage);
+  const totalPages = Math.ceil(jobs.length / perPage);
+
+  // filter item
   const filterItem = ["all", "Part-time", "Full-time"];
   return (
     <>
@@ -178,7 +184,7 @@ const Careers = () => {
             {/* JOBS */}
 
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-              {jobs.map((job, index) => (
+              {paginatedJobs.map((job, index) => (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -252,6 +258,18 @@ const Careers = () => {
                 <p>0049 876 893 458</p>
               </div>
             </motion.div>
+            {/* pagenation */}
+            <div className="flex gap-2 mt-5">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  onClick={() => setPage(i + 1)}
+                  key={i}
+                  className="px-3 py-2 border bg-sky-800 text-white cursor-pointer"
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-24">
             {benefits.map((item, i) => (
