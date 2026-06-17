@@ -19,6 +19,19 @@ export const useJobs = (jobType) => {
   });
 };
 
+// export const useJobs = (jobType, page) => {
+//   return useQuery({
+//     queryKey: ["jobs", jobType, page],
+//     queryFn: ({ queryKey }) => {
+//       const [, jobType, page] = queryKey;
+//       let url = `http://localhost:5000/jobs?_page=${page}&_limit=6`;
+//       if (fitler != "all") {
+//         url += `&type=${jobType}`;
+//       }
+//       return getJobs(url);
+//     },
+//   });
+// };
 export const useJob = (slug) => {
   return useQuery({
     queryKey: ["job", slug],

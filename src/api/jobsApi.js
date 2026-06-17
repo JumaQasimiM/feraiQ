@@ -2,6 +2,7 @@ import { fetchData } from "./api";
 
 export const getJobs = () => {
   let url = "/db.json";
+
   return fetchData(url);
 };
 
