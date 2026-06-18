@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 const containerVariants = {
   hidden: {},
   show: {
@@ -11,6 +12,8 @@ const containerVariants = {
   },
 };
 const ServiceCard = ({ service }) => {
+  // tranlation
+  const { t } = useTranslation();
   return (
     <motion.div
       variants={containerVariants}
@@ -27,7 +30,7 @@ const ServiceCard = ({ service }) => {
         to={service.link}
         className="mt-8 inline-flex items-center justify-center rounded bg-[#1E2F97] px-6 py-3 font-medium text-white transition-colors duration-300 hover:bg-[#17257a]"
       >
-        Mehr erfahren
+        {t("learn_more")}
       </motion.Link>
     </motion.div>
   );

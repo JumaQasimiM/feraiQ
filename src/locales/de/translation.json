@@ -1,5 +1,21 @@
 {
-  "welcome": "Willkommen",
+  "home": "Startseite",
+  "about_au": "Über uns",
+  "news": "News",
+  "contact": "Kontakt",
   "jobs": "karriere",
-  "services": "Leistungen"
+  "services": "Leistungen",
+  "consulting": "Beratung",
+  "ai": "KI",
+  "web_devlopment": "Webentwicklung",
+  "free_consultation": "Kostenlose Beratung",
+  "free_advice": "Unverbindlich beraten lassen",
+  "learn_more": "Mehr erfahren",
+  "menu": "navigation",
+  "follow_us": "Folgen Sie uns",
+  "via_email": "Per Email",
+  "call_us": "Rufen Sie an",
+  "visit_us": "Besuchen Sie uns",
+  "we_will_help_you": "Wir helfen Ihnen weiter",
+  "contact_ads": "feraiQ ist ein IT-Systemhaus mit Sitz in Overath. Von hier aus betreut smartworx Kunden deutschlandweit. Sie haben eine Frage? Wir freuen uns auf Ihre Nachricht oder Anruf!"
 }

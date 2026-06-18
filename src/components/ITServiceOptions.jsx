@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 const services = [
   {
     title: "IT-Abteilung ersetzen",
@@ -38,6 +39,8 @@ const itemVariants = {
 };
 
 const ITServiceOptions = () => {
+  // tranlation
+  const { t } = useTranslation();
   return (
     <section className="mx-auto max-w-7xl px-5 py-24">
       {/* Header */}

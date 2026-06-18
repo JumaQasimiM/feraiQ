@@ -1,5 +1,11 @@
 {
   "welcome": "Welcome",
   "jobs": "Careers",
-  "services": "Services"
+  "services": "Services",
+  "consulting": "Consulting",
+  "free_consultation": "Free consultation",
+  "free_advice": "Get expert advice with no obligation",
+  "ai": "AI",
+  "web_devlopment": "Web Development",
+  "learn_more": "learn more"
 }

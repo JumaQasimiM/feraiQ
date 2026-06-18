@@ -3,18 +3,21 @@ import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaUser } from "react-icons/fa";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
-
+import { useTranslation } from "react-i18next";
 import logo from "../assets/logo-1.png";
+import i18next from "i18next";
+import i18n from "../i18n";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  // localzation
+  const { t } = useTranslation();
   const navItems = [
-    { name: "Startseite", path: "/" },
-    { name: "Leistungen", path: "/services" },
-    { name: "Karriere", path: "/careers" },
-    { name: "News", path: "/news" },
-    { name: "Kontakt", path: "/contact" },
+    { key: "home", path: "/" },
+    { key: "services", path: "/services" },
+    { key: "jobs", path: "/careers" },
+    { key: "news", path: "/news" },
+    { key: "contact", path: "/contact" },
   ];
 
   return (
@@ -47,7 +50,7 @@ const Navbar = () => {
                 >
                   {({ isActive }) => (
                     <>
-                      {item.name.toUpperCase()}
+                      {t(item.key).toUpperCase()}
 
                       <span
                         className={`absolute -bottom-1 left-0 h-[2px] rounded-full bg-[#1E2F97] transition-all duration-300 ${
@@ -59,6 +62,21 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
+            <li className="flex gap-3  font-semibold">
+              <button
+                className="cursor-pointer"
+                onClick={() => i18n.changeLanguage("de")}
+              >
+                de
+              </button>{" "}
+              /
+              <button
+                className="cursor-pointer"
+                onClick={() => i18n.changeLanguage("en")}
+              >
+                en
+              </button>
+            </li>
 
             <Link
               to="/contact"
@@ -78,7 +96,7 @@ const Navbar = () => {
             hover:shadow-xl
           "
             >
-              Kostenlose Beratung
+              {t("free_consultation")}
             </Link>
           </ul>
         </nav>
@@ -98,7 +116,7 @@ const Navbar = () => {
           text-white
         "
           >
-            Beratung
+            {t("consulting")}
           </Link>
 
           <button
@@ -171,7 +189,7 @@ const Navbar = () => {
                     <h3 className="font-semibold">FeraiQ IT Solutions</h3>
 
                     <p className="text-sm text-white/80">
-                      Software • Webentwicklung • KI
+                      Software • {t("web_devlopment")} • {t("ai")}
                     </p>
                   </div>
                 </div>
@@ -192,10 +210,14 @@ const Navbar = () => {
                         }`
                       }
                     >
-                      {item.name}
+                      {t(item.key).toUpperCase()}
                     </NavLink>
                   </li>
                 ))}
+                <li className="flex flex-col justify-start gap-2 cursor-pointer ">
+                  <button onClick={() => i18n.changeLanguage("de")}>de</button>
+                  <button onClick={() => i18n.changeLanguage("en")}>en</button>
+                </li>
               </ul>
 
               {/* CTA */}
@@ -218,7 +240,7 @@ const Navbar = () => {
                 hover:scale-[1.02]
               "
                 >
-                  Unverbindlich beraten lassen
+                  {t("free_advice")}
                 </Link>
               </div>
             </motion.div>

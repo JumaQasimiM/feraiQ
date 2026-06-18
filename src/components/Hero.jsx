@@ -1,6 +1,7 @@
 import programing from "../assets/programing.png";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const containerVariants = {
   hidden: {},
@@ -45,6 +46,8 @@ const cardVariants = {
 };
 
 const Hero = () => {
+  // tranlation
+  const { t } = useTranslation();
   return (
     <section className="relative h-[95vh] md:h-[90vh] overflow-hidden bg-gradient-to-br from-[#1E2F97] via-[#2d46c5] to-[#3c63ff]">
       {/* Overlay */}
@@ -225,7 +228,7 @@ const Hero = () => {
                     shadow-lg
                   "
                 >
-                  Kostenlos beraten lassen
+                  {t("free_consultation")}
                 </motion.button>
               </Link>
             </motion.div>
