@@ -20,6 +20,7 @@ import programming4 from "../assets/programing3.jpg";
 import programming5 from "../assets/programing5.jpg";
 import ansprochpartner from "../assets/ansprochpartner.jpg";
 import { useJobs } from "../hooks/useJobs";
+import { useTranslation } from "react-i18next";
 
 const benefits = [
   {
@@ -29,17 +30,17 @@ const benefits = [
   },
   {
     icon: <FaHome />,
-    title: "Flexible Arbeitsmodelle",
+    title: "flexible_working_models",
     text: "Remote, Hybrid oder im Büro – wir bieten flexible Arbeitsmöglichkeiten.",
   },
   {
     icon: <FaUsers />,
-    title: "Starkes Team",
+    title: "strong_team",
     text: "Offene Kommunikation, gegenseitige Unterstützung und ein wertschätzendes Miteinander.",
   },
   {
     icon: <FaGraduationCap />,
-    title: "Weiterbildung",
+    title: "professional_development",
     text: "Regelmäßige Schulungen, Zertifizierungen und persönliche Entwicklungsmöglichkeiten.",
   },
   {
@@ -49,7 +50,7 @@ const benefits = [
   },
   {
     icon: <FaRocket />,
-    title: "Karrierechancen",
+    title: "career_opportunities",
     text: "Spannende Projekte, Eigenverantwortung und langfristige Entwicklungsperspektiven.",
   },
 ];
@@ -101,6 +102,8 @@ const Careers = () => {
 
   // filter item
   const filterItem = ["all", "Part-time", "Full-time"];
+  // localization
+  const { t } = useTranslation();
   return (
     <>
       {/* herder */}
@@ -130,14 +133,14 @@ const Careers = () => {
             variants={item}
             className="uppercase tracking-[4px] text-sm font-medium text-gray-200"
           >
-            Karriere bei feraiQ
+            {t("careers_at_feraiQ")}
           </motion.span>
 
           <motion.h1
             variants={item}
             className="mt-4 text-4xl md:text-6xl font-bold font-quicksand"
           >
-            Offene Stellen
+            {t("open_positions")}
           </motion.h1>
 
           <motion.p
@@ -155,7 +158,7 @@ const Careers = () => {
             whileTap={{ scale: 0.98 }}
             className="mt-8 px-8 py-3 bg-[#1E2F97] hover:bg-[#2339c3] rounded font-medium transition"
           >
-            Jetzt bewerben
+            {t("apply_now")}
           </motion.button>
         </motion.div>
       </motion.div>
@@ -170,7 +173,7 @@ const Careers = () => {
               <button
                 key={index}
                 onClick={() => setFilter(item)}
-                className={`py-2 px-3 transition-all cursor-pointer ${
+                className={`py-1 px-3 transition-all cursor-pointer mb-3 ${
                   filter === item
                     ? "bg-[#1c2ea5] text-white font-semibold"
                     : "bg-[#263dd2] text-white"
@@ -224,7 +227,7 @@ const Careers = () => {
                     </span>
 
                     <button className="text-sm font-medium text-[#1E2F97] hover:text-[#2d41c4] transition">
-                      <Link to={job.slug}>Bewerben →</Link>
+                      <Link to={job.slug}>{t("apply")} →</Link>
                     </button>
                   </div>
                 </motion.div>
@@ -239,7 +242,9 @@ const Careers = () => {
               transition={{ duration: 1 }}
               className=" h-fit"
             >
-              <h3 className="text-lg font-semibold">Deine Ansprechpartnerin</h3>
+              <h3 className="text-lg font-semibold">
+                {t("your_contact_person")}
+              </h3>
 
               <img
                 src={ansprochpartner}
@@ -264,39 +269,46 @@ const Careers = () => {
                 <button
                   onClick={() => setPage(i + 1)}
                   key={i}
-                  className="px-3 py-2 border bg-sky-800 text-white cursor-pointer"
+                  className="px-3 py-1 rounded font-semibold border bg-sky-800 text-white cursor-pointer"
                 >
                   {i + 1}
                 </button>
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-24">
-            {benefits.map((item, i) => (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                key={i}
-                className="p-8 border border-gray-200 rounded-lg bg-white "
-              >
-                <div className="flex justify-center">
-                  <h1 className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-[#1E2F97] text-2xl">
-                    {item.icon}
-                  </h1>
-                </div>
 
-                <h3 className="mt-5 text-lg font-semibold text-slate-900">
-                  {item.title}
-                </h3>
+          {/* benefits */}
+          <div className="my-24">
+            <h1 className="my-2 md:my-4 font-quicksand font-semibold text-xl md:text-4xl">
+              {t("benefits")}
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+              {benefits.map((item, i) => (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  key={i}
+                  className="p-8 border border-gray-200 rounded-lg bg-white "
+                >
+                  <div className="flex justify-center">
+                    <h1 className="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-[#1E2F97] text-2xl">
+                      {item.icon}
+                    </h1>
+                  </div>
 
-                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                  {item.text}
-                </p>
-              </motion.div>
-            ))}
+                  <h3 className="mt-5 text-lg font-semibold text-slate-900">
+                    {t(item.title)}
+                  </h3>
+
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                    {item.text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 
