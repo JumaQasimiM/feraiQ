@@ -18,7 +18,7 @@ import programming2 from "../assets/programing2.jpg";
 import programming3 from "../assets/programing4.jpg";
 import programming4 from "../assets/programing3.jpg";
 import programming5 from "../assets/programing5.jpg";
-import ansprochpartner from "../assets/ansprochpartner.jpg";
+import ansprochpartner from "../assets/programing5.jpg";
 import { useJobs } from "../hooks/useJobs";
 import { useTranslation } from "react-i18next";
 
