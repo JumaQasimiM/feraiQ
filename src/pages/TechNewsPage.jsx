@@ -9,6 +9,7 @@ import programming5 from "../assets/programing5.jpg";
 import ansprochpartner from "../assets/ansprochpartner.jpg";
 import { Link } from "react-router-dom";
 import { useNews } from "../hooks/useNews";
+import { useTranslation } from "react-i18next";
 
 // ======= start animation motion ======
 
@@ -37,6 +38,8 @@ const TechNewsGermany = () => {
   const { data } = useNews();
   const news = data?.news || [];
 
+  // localization
+  const { t } = useTranslation();
   return (
     <section className="min-h-screen py-20 px-6">
       {/* HEADER */}
@@ -93,7 +96,7 @@ const TechNewsGermany = () => {
             {/* READ MORE */}
             <Link to={`/news/${item.slug}`}>
               <button className="mt-5 text-blue-600 font-medium hover:underline">
-                Mehr lesen →
+                {t("learn_more")} →
               </button>
             </Link>
           </motion.div>
