@@ -8,12 +8,15 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import logo from "../assets/logo-1.png";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  // localization
+  const { t } = useTranslation();
   const navigation = [
-    { name: "Startseite", link: "/" },
-    { name: "Leistungen", link: "/services" },
-    { name: "Karriere", link: "/careers" },
-    { name: " Kontakt", link: "/contact" },
+    { key: "home", link: "/" },
+    { key: "services", link: "/services" },
+    { key: "jobs", link: "/careers" },
+    { key: " contact", link: "/contact" },
   ];
   return (
     <footer className="bg-slate-950 text-white mt-10">
@@ -32,13 +35,13 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-lg font-semibold">Navigation</h3>
+            <h3 className="text-lg font-semibold">{t("menu")}</h3>
 
             <ul className="mt-4 space-y-3 text-slate-400">
               {navigation.map((nav, index) => (
                 <li key={index}>
                   <a href={nav.link} className="hover:text-sky-700">
-                    {nav.name}
+                    {t(nav.key)}
                   </a>
                 </li>
               ))}
@@ -47,7 +50,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold">Kontakt</h3>
+            <h3 className="text-lg font-semibold">{t("contact")}</h3>
 
             <div className="mt-4 space-y-4 text-slate-400">
               <div className="flex items-center gap-3">
@@ -69,7 +72,7 @@ const Footer = () => {
 
           {/* Social */}
           <div>
-            <h3 className="text-lg font-semibold">Folgen Sie uns</h3>
+            <h3 className="text-lg font-semibold">{t("follow_us")}</h3>
 
             <div className="flex gap-4 mt-4">
               <a
@@ -99,15 +102,15 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} feraiQ. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} feraiQ. {t("copy_right")}
           </p>
 
           <div className="flex gap-6 mt-4 md:mt-0 text-sm text-slate-500">
             <a href="#" className="hover:text-sky-600">
-              Impressum
+              {t("impressum")}
             </a>
             <a href="#" className="hover:text-sky-600">
-              Datenschutz
+              {t("datenschutz")}
             </a>
           </div>
         </div>

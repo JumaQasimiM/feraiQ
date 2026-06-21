@@ -1,8 +1,11 @@
 {
   "welcome": "Welcome",
+  "home": "Home",
   "jobs": "Careers",
   "services": "Services",
   "contact": "Contact Us",
+  "menu": "Menu",
+  "news": "News",
   "consulting": "Consulting",
   "free_consultation": "Free consultation",
   "free_advice": "Get expert advice with no obligation",
@@ -12,5 +15,9 @@
   "we_will_help_you": "We will help you",
   "via_email": "Via Email",
   "call_us": "Call Us",
-  "visit_us": "Visit Us"
+  "visit_us": "Visit Us",
+  "follow_us": "Follow us",
+  "impressum": "Legal Information",
+  "datenschutz": "Privacy Policy",
+  "copy_right": "All rights reserved."
 }
