@@ -4,21 +4,24 @@ import { motion } from "motion/react";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsTelephoneForward } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  // translation
+  const { t } = useTranslation();
   const contactInfo = [
     {
-      title: "Besuchen Sie uns:",
-      description: "Heilbronner Straße 0, 74000 Heilbronn",
+      key: "visit_us",
+      description: "abc Straße xx, xxxx ABC",
       icon: <IoLocationOutline />,
     },
     {
-      title: "Rufen Sie an:",
-      description: "0049 1521 4795072",
+      key: "call_us",
+      description: "0049 6789 4795000",
       icon: <BsTelephoneForward />,
     },
     {
-      title: "Per E-Mail",
+      key: "via_email",
       description: "info@feraiQ.com",
       icon: <TfiEmail />,
     },
@@ -46,9 +49,11 @@ const ContactUs = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* header */}
         <div className="text-center mb-12 space-y-5">
-          <h1 className="text-lg font-semibold text-sky-800">KONTAKT</h1>
+          <h1 className="text-lg font-semibold text-sky-800">
+            {t("contact").toUpperCase()}
+          </h1>
           <h2 className="text-xl md:text-4xl mt-2 font-bold">
-            Wir helfen Ihnen weiter
+            {t("we_will_help_you")}
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             feraiQ ist ein IT-Systemhaus mit Sitz in Overath. Von hier aus
@@ -67,7 +72,7 @@ const ContactUs = () => {
               <div className="text-3xl flex justify-center text-sky-900 mb-6">
                 {info.icon}
               </div>
-              <h3 className="font-semibold text-xl">{info.title}</h3>
+              <h3 className="font-semibold text-xl">{t(info.key)}</h3>
               <p className="text-gray-600 mt-2">{info.description}</p>
             </div>
           ))}

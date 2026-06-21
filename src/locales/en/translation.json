@@ -2,10 +2,15 @@
   "welcome": "Welcome",
   "jobs": "Careers",
   "services": "Services",
+  "contact": "Contact Us",
   "consulting": "Consulting",
   "free_consultation": "Free consultation",
   "free_advice": "Get expert advice with no obligation",
   "ai": "AI",
   "web_devlopment": "Web Development",
-  "learn_more": "learn more"
+  "learn_more": "learn more",
+  "we_will_help_you": "We will help you",
+  "via_email": "Via Email",
+  "call_us": "Call Us",
+  "visit_us": "Visit Us"
 }
