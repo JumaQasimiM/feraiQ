@@ -4,17 +4,17 @@ import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 const services = [
   {
-    title: "IT-Abteilung ersetzen",
+    title: "replace_it",
     desc: "Sie möchten Ihre interne IT durch einen IT-Dienstleister ersetzen?",
     link: "/services",
   },
   {
-    title: "IT-Dienstleister wechseln",
+    title: "change_it_provider",
     desc: "Sie sind unzufrieden mit Ihrem bisherigen IT-Dienstleister und wollen wechseln?",
     link: "/services",
   },
   {
-    title: "Spezial-Support",
+    title: "expert_support",
 
     desc: "Sie suchen Unterstützung für Ihre interne IT in Spezialthemen?",
     link: "/services",
@@ -51,11 +51,11 @@ const ITServiceOptions = () => {
         className="mx-auto max-w-4xl text-center  font-quicksand font-extrabold"
       >
         <span className="text-sm uppercase tracking-widest text-brand-color">
-          Ihr zuverlässiger IT-Partner vor Ort
+          {t("it_partner")}
         </span>
 
         <h2 className="mt-4 text-2xl leading-tight text-slate-900 md:text-5xl ">
-          Kontinuierliche IT-Betreuung und Support
+          {t("it_support")}
         </h2>
 
         <p className="mt-4 text-lg text-slate-700 md:text-xl text-center">

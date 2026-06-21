@@ -4,6 +4,7 @@ import { FaArrowDownLong } from "react-icons/fa6";
 
 import ITServiceOptions from "../components/ITServiceOptions";
 import ContactUs from "./ContactUs";
+import { useTranslation } from "react-i18next";
 
 /* ---------------- ANIMATION ---------------- */
 
@@ -24,19 +25,19 @@ const services = [
     desc: "Schnelle Hilfe bei technischen Problemen – remote oder vor Ort.",
   },
   {
-    title: "Cloud-Lösungen",
+    title: "cloud_solutions",
     desc: "Moderne Cloud-Infrastruktur für flexible und sichere IT-Systeme.",
   },
   {
-    title: "IT-Sicherheit",
+    title: "it_security",
     desc: "Schutz Ihrer Daten durch Firewalls, Backup & Security-Lösungen.",
   },
   {
-    title: "IT-Beratung",
+    title: "it_beratung",
     desc: "Strategische Planung Ihrer gesamten IT-Infrastruktur.",
   },
   {
-    title: "Netzwerk & Infrastruktur",
+    title: "network_infr",
     desc: "Aufbau und Wartung stabiler Unternehmensnetzwerke.",
   },
   {
@@ -52,6 +53,8 @@ const services = [
 /* ---------------- COMPONENT ---------------- */
 
 const Services = () => {
+  // localization
+  const { t } = useTranslation();
   return (
     <section className="w-full">
       {/* HERO SERVICES BLOCK */}
@@ -70,7 +73,7 @@ const Services = () => {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-5xl font-bold font-quicksand">
-              Unsere IT-Services
+              {t("our_it_services")}
             </h2>
             <p className="mt-4 text-white/80 max-w-2xl mx-auto">
               Wir bieten ganzheitliche IT-Lösungen für Unternehmen jeder Größe –
@@ -90,7 +93,7 @@ const Services = () => {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded"
               >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <h3 className="text-xl font-semibold">{t(item.title)}</h3>
                 <p className="mt-3 text-white/80 text-sm leading-relaxed">
                   {item.desc}
                 </p>
@@ -110,26 +113,14 @@ const Services = () => {
       >
         <div className="max-w-5xl mx-auto px-6 py-16">
           <h2 className="text-2xl md:text-4xl font-bold font-quicksand text-slate-900 mb-8">
-            Warum feraiQ?
+            {t("why")} feraiQ?
           </h2>
 
           <div className="space-y-6 text-slate-600 leading-8 text-lg">
-            <p>
-              Wir unterstützen Unternehmen mit professionellen IT-Services und
-              modernen Technologien.
-            </p>
-
-            <p>
-              Unsere Lösungen sind individuell, skalierbar und auf langfristige
-              Zusammenarbeit ausgelegt.
-            </p>
-
-            <p>
-              Durch Erfahrung aus vielen Projekten liefern wir stabile und
-              effiziente IT-Strukturen.
-            </p>
-
-            <p>Ziel: IT einfach, sicher und leistungsfähig machen.</p>
+            <p>{t("w1")}</p>
+            <p>{t("w2")}</p>
+            <p>{t("w3")}</p>
+            <p>{t("w4")}</p>
           </div>
         </div>
       </motion.div>
@@ -144,7 +135,7 @@ const Services = () => {
       >
         <div className="max-w-7xl mx-auto px-6 py-20 text-center text-white">
           <h2 className="text-3xl md:text-5xl font-bold font-quicksand">
-            Benötigen Sie Unterstützung?
+            {t("do_u_need_support")}
           </h2>
 
           <p className="mt-5 max-w-2xl mx-auto text-white/85 text-lg">
@@ -168,7 +159,7 @@ const Services = () => {
               shadow-lg
             "
           >
-            Jetzt Kontakt aufnehmen
+            {t("contact_now")}
             <motion.span
               animate={{ y: [0, 4, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}

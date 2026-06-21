@@ -21,7 +21,7 @@ const ServiceCard = ({ service }) => {
     >
       <motion.div an>
         <h3 className="text-xl font-semibold text-slate-900 leading-snug ">
-          {service.title}
+          {t(service.title)}
         </h3>
         <h6>{service.desc}</h6>
       </motion.div>
