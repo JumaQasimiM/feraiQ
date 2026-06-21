@@ -3,6 +3,7 @@ import TestimonialCard from "./TestimonialCard";
 import { motion, AnimatePresence } from "framer-motion";
 
 import bgTestmonial from "../assets/bg-testmonial.jpg";
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -51,6 +52,8 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [isPaused]);
 
+  // localization
+  const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden min-h-[88vh] py-12 md:py-24">
       {/* Animated Background */}
@@ -89,11 +92,11 @@ const Testimonials = () => {
             className="text-white"
           >
             <span className="text-sm uppercase tracking-widest font-semibold text-sky-300">
-              Kundenstimmen
+              {t("customer_testimonials")}
             </span>
 
             <h2 className="mt-3 text-3xl md:text-5xl font-bold leading-tight">
-              Was sagen unsere Kunden?
+              {t("what_say")}
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-white/80">

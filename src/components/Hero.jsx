@@ -108,7 +108,7 @@ const Hero = () => {
                 mb-6
               "
             >
-              Dein IT-Systemhaus in Öhringen
+              {t("it_provider_ohringen")}
             </motion.span>
 
             {/* Heading */}
@@ -123,9 +123,7 @@ const Hero = () => {
                 font-quicksand
               "
             >
-              Zuverlässige IT für
-              <br />
-              Unternehmen in deiner Region
+              {t("shoar_hero")}
             </motion.h1>
 
             {/* Desktop Text */}
@@ -139,9 +137,7 @@ const Hero = () => {
                 hidden md:block
               "
             >
-              Von IT-Support über Cloud-Lösungen bis hin zur kompletten
-              Systembetreuung – wir sorgen dafür, dass Ihre IT zuverlässig und
-              zukunftssicher funktioniert.
+              {t("shoar_content_hero")}
             </motion.p>
 
             {/* Mobile Text */}
@@ -155,7 +151,7 @@ const Hero = () => {
                 md:hidden
               "
             >
-              IT-Support, Cloud & Sicherheit aus einer Hand.
+              {t("mobile_content_hero")}
             </motion.p>
 
             {/* Desktop Benefits */}
@@ -168,16 +164,9 @@ const Hero = () => {
                 hidden md:block
               "
             >
-              <li>
-                ✓ Schneller IT-Support – kompetente Hilfe, wenn Sie sie brauchen
-              </li>
-
-              <li>
-                ✓ Transparente Betreuung – volle Kontrolle über Systeme, Kosten
-                und Verträge
-              </li>
-
-              <li>✓ Moderne Hardware & Software – alles aus einer Hand</li>
+              <li>✓ {t("option1")}</li>
+              <li>✓ {t("option2")}</li>
+              <li>✓ {t("option3")}</li>
             </motion.ul>
 
             {/* Mobile Benefits */}
@@ -190,10 +179,10 @@ const Hero = () => {
                 md:hidden
               "
             >
-              <li>✓ Schneller IT-Support</li>
-              <li>✓ Transparente Betreuung</li>
-              <li>✓ Hardware & Software aus einer Hand</li>
-              <li>✓ Höchste Datensicherheit</li>
+              <li>✓ {t("mobile_op1")}</li>
+              <li>✓ {t("mobile_op2")}</li>
+              <li>✓ {t("mobile_op3")}</li>
+              <li>✓ {t("mobile_op4")}</li>
             </motion.ul>
 
             {/* CTA */}

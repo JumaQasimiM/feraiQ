@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import WhyChooseUsCard from "./WhyChooseUsCard";
 import { FiFileText } from "react-icons/fi";
 import { BiTimer } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 
 const containerVariants = {
   hidden: {},
@@ -30,21 +31,23 @@ const itemVariants = {
 };
 
 const WhyChooseUs = () => {
+  // localization
+  const { t } = useTranslation();
   const whyChooseUsItem = [
     {
-      title: "Fundiertes IT-Know-how",
+      title: "why_option1",
       description:
         "Wir unterstützen Unternehmen mit professionellen IT-Lösungen und einem klaren Fokus auf langfristige Partnerschaften.",
       icon: <FiFileText size={50} />,
     },
     {
-      title: "Schnelle Reaktionszeiten",
+      title: "why_option2",
       description:
         "Erreichbarkeit und schnelle Unterstützung sind für uns selbstverständlich – bei Bedarf auch außerhalb üblicher Geschäftszeiten.",
       icon: <BiTimer size={50} />,
     },
     {
-      title: "Lösungsorientierte Arbeitsweise",
+      title: "why_option3",
       description:
         "Wir lösen IT-Herausforderungen effizient, wirtschaftlich und mit Blick auf Ihre Geschäftsziele.",
       icon: <FiFileText size={50} />,
@@ -66,9 +69,7 @@ const WhyChooseUs = () => {
           className="text-center font-quicksand"
         >
           <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
-            Warum Sie sich
-            <br />
-            für feraiQ entscheiden sollten
+            {t("why_feraiq")}
           </h2>
         </motion.div>
 
@@ -86,7 +87,7 @@ const WhyChooseUs = () => {
           {whyChooseUsItem.map((item, index) => (
             <motion.div key={index} variants={itemVariants}>
               <WhyChooseUsCard
-                title={item.title}
+                title={t(item.title)}
                 icon={item.icon}
                 description={item.description}
               />
@@ -122,7 +123,7 @@ const WhyChooseUs = () => {
               shadow-lg
             "
           >
-            Jetzt beraten lassen
+            {t("talk_exprt_now")}
           </motion.button>
         </motion.div>
       </div>
